@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Toaster } from "react-hot-toast";
+// import { Suspense, lazy } from "react";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
+// import Songs from "./pages/Songs";
+// import Books from "./pages/Books";
+// import About from "./pages/About";
+// import Contact from "./pages/Contact";
+// import NotFound from "./pages/Notfound";
+// import Blogs from "./pages/Blogs";
+// import Podcasts from "./pages/Podcasts";
+
+// const Header = lazy(() => import("./components/Header/Header"));
+// const Footer = lazy(() => import("./components/Footer/Footer"));
+// const Home = lazy(() => import("./pages/Home"));
+// const Songs = lazy(() => import("./pages/Songs"));
+// const Books = lazy(() => import("./pages/Books"));
+// const About = lazy(() => import("./pages/About"));
+// const Contact = lazy(() => import("./pages/Contact"));
+// const Loading = lazy(() => import("./pages/Loading"));
+// const NotFound = lazy(() => import("./pages/Notfound"));
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <AnimatePresence mode="wait">
+        {/* <Suspense fallback={""}> */}
+        {/* </Suspense> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/songs" element={<Songs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/podcasts" element={<Podcasts />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </AnimatePresence>
+      <Footer />
+      <Toaster />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
