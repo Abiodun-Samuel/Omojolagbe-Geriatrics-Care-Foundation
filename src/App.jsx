@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from "react-hot-toast";
+import AOS from "aos";
 // import { Suspense, lazy } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
+import { useEffect } from "react";
 // import Songs from "./pages/Songs";
 // import Books from "./pages/Books";
 // import About from "./pages/About";
@@ -24,6 +26,9 @@ import Home from "./pages/Home";
 // const NotFound = lazy(() => import("./pages/Notfound"));
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <>
       <Header />

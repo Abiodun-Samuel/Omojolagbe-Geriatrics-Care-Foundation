@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { FaRegAddressCard } from "react-icons/fa";
-import { CgMenuGridR } from "react-icons/cg";
 import { AiOutlineProfile } from "react-icons/ai";
-import { BsBook, BsMusicNoteBeamed } from "react-icons/bs";
+import { BsBook, } from "react-icons/bs";
 
 const Footer = () => {
   const year = new Date().getFullYear();

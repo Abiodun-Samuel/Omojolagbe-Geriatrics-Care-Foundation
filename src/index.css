@@ -42,7 +42,7 @@
 }
 
 #hero .carousel-item {
-  min-height: 100vh;
+  min-height: 105vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -68,6 +68,11 @@
 }
 
 @media screen and (max-width: 480px) {
+  #hero h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 900px) {

@@ -70,20 +70,26 @@ const Home = () => {
                   data-bs-interval="2000"
                 >
                   <div className="col-lg-6 col-md-10">
-                    <h1>Best Home Care & Services Provider</h1>
-                    <p className="lead mt-3">
-                      We create <span className="text-warning">healthier</span>,{" "}
-                      <span className="text-warning">happier</span> and{" "}
-                      <span className="text-warning">fruitful</span> life for
-                      the elderly.
-                    </p>
-                    <div className="mt-3">
-                      <Link to="/services" className="btn btn-warning" >
-                        Services
-                      </Link>
-                      <Link to="/contact" className="btn btn-outline-warning mx-2">
-                        Contact
-                      </Link>
+                    <div className="container">
+                      <h1>Best Home Care & Services Provider</h1>
+                      <p className="lead mt-3">
+                        We create{" "}
+                        <span className="text-warning">healthier</span>,{" "}
+                        <span className="text-warning">happier</span> and{" "}
+                        <span className="text-warning">fruitful</span> life for
+                        the elderly.
+                      </p>
+                      <div className="mt-3">
+                        <Link to="/services" className="btn btn-warning">
+                          Services
+                        </Link>
+                        <Link
+                          to="/contact"
+                          className="btn btn-outline-warning mx-2"
+                        >
+                          Contact
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -92,20 +98,26 @@ const Home = () => {
                   data-bs-interval="2000"
                 >
                   <div className="col-lg-6 col-md-10">
-                    <h1>Best Home Care & Services Provider</h1>
-                    <p className="lead mt-3">
-                      We create <span className="text-warning">healthier</span>,{" "}
-                      <span className="text-warning">happier</span> and{" "}
-                      <span className="text-warning">fruitful</span> life for
-                      the elderly.
-                    </p>
-                    <div className="mt-3">
-                      <Link to="/services" className="btn btn-warning" >
-                        Services
-                      </Link>
-                      <Link to="/contact" className="btn btn-outline-warning mx-2">
-                        Contact
-                      </Link>
+                    <div className="container">
+                      <h1>Best Home Care & Services Provider</h1>
+                      <p className="lead mt-3">
+                        We create{" "}
+                        <span className="text-warning">healthier</span>,{" "}
+                        <span className="text-warning">happier</span> and{" "}
+                        <span className="text-warning">fruitful</span> life for
+                        the elderly.
+                      </p>
+                      <div className="mt-3">
+                        <Link to="/services" className="btn btn-warning">
+                          Services
+                        </Link>
+                        <Link
+                          to="/contact"
+                          className="btn btn-outline-warning mx-2"
+                        >
+                          Contact
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -114,20 +126,26 @@ const Home = () => {
                   data-bs-interval="2000"
                 >
                   <div className="col-lg-6 col-md-10">
-                    <h1>Best Home Care & Services Provider</h1>
-                    <p className="lead mt-3">
-                      We create <span className="text-warning">healthier</span>,{" "}
-                      <span className="text-warning">happier</span> and{" "}
-                      <span className="text-warning">fruitful</span> life for
-                      the elderly.
-                    </p>
-                    <div className="mt-3">
-                      <Link to="/services" className="btn btn-warning" >
-                        Services
-                      </Link>
-                      <Link to="/contact" className="btn btn-outline-warning mx-2">
-                        Contact
-                      </Link>
+                    <div className="container">
+                      <h1>Best Home Care & Services Provider</h1>
+                      <p className="lead mt-3">
+                        We create{" "}
+                        <span className="text-warning">healthier</span>,{" "}
+                        <span className="text-warning">happier</span> and{" "}
+                        <span className="text-warning">fruitful</span> life for
+                        the elderly.
+                      </p>
+                      <div className="mt-3">
+                        <Link to="/services" className="btn btn-warning">
+                          Services
+                        </Link>
+                        <Link
+                          to="/contact"
+                          className="btn btn-outline-warning mx-2"
+                        >
+                          Contact
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
