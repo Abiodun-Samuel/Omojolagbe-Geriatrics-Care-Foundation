@@ -14,7 +14,7 @@
   color: var(--bs-dark);
   background-color: var(--bs-warning);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991.98px) {
   .navbar {
     background-color: #242424 !important;
   }

@@ -94,7 +94,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div
-                  className="carousel-item active carousel-two text-center d-flex justify-content-center align-items-center"
+                  className="carousel-item carousel-two text-center d-flex justify-content-center align-items-center"
                   data-bs-interval="2000"
                 >
                   <div className="col-lg-6 col-md-10">
@@ -122,7 +122,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div
-                  className="carousel-item active carousel-three text-center d-flex justify-content-center align-items-center"
+                  className="carousel-item carousel-three text-center d-flex justify-content-center align-items-center"
                   data-bs-interval="2000"
                 >
                   <div className="col-lg-6 col-md-10">
