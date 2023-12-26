@@ -42,7 +42,7 @@
 }
 
 #hero .carousel-item {
-  min-height: 105vh;
+  min-height: 720px;
   background-repeat: no-repeat;
   background-size: cover;
 }
