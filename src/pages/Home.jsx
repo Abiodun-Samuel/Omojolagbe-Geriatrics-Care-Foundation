@@ -152,6 +152,14 @@ const Home = () => {
               </div>
             </div>
           </section>
+
+          <div className="text-center">
+            <img
+              className="img-fluid text-center my-2"
+              src="https://img.freepik.com/free-vector/flat-construction-template_23-2147740695.jpg?w=740&t=st=1703678148~exp=1703678748~hmac=0531f0775ce33c9e0784c3e3982fdc26ad632707b4bdba74ae3da4b96e8d9d2e"
+              alt=""
+            />
+          </div>
         </main>
       </motion.div>
     </>
