@@ -106,11 +106,12 @@ section#about {
 
 /* footer section  */
 #footer {
-  padding: 5rem 0 1.5rem 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  padding: 3.5rem 0 1rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
     url("./assets/images/bg/footer_bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  color: #839192;
 }
 
 #footer .footer-top h4 {
@@ -142,48 +143,21 @@ section#about {
 }
 
 #footer .footer-top .footer-links {
-  margin-bottom: 3rem;
   padding: 1rem;
 }
 
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 5px 0 0 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 0 0 1.5rem 0;
-}
-
-#footer .footer-top .footer-links ul a {
+#footer .footer-top .footer-links a {
   transition: 0.3s;
-  color: #839192;
-  font-weight: 500;
+  color: inherit;
 }
 
-#footer .footer-top .footer-links ul a:hover {
-  color: var(--yellow-2);
+#footer .footer-top .footer-links a:hover {
+  color: var(--yellow-0);
 }
 
 #footer .footer-top .footer-contact {
-  margin-bottom: 3rem;
   padding: 1rem;
-}
-
-#footer .footer-top .footer-contact p {
-  line-height: 2.5rem;
-}
-
-#footer .social-links svg {
-  fill: rgba(150, 150, 150, 0.7);
-  stroke: rgba(150, 150, 150, 0.7);
-  box-shadow: var(--shadow-1);
-}
-
-#footer .social-links svg:hover {
-  fill: var(--yellow-2);
-  stroke: var(--yellow-2);
+  color: inherit;
 }
 
 /*
