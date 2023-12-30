@@ -1,5 +1,4 @@
 import notFound from "../assets/images/404.jpg";
-import transition from "../components/transition";
 import { Link } from "react-router-dom";
 const NotFound = () => {
   return (
@@ -9,9 +8,11 @@ const NotFound = () => {
         className="img-fluid shadow-sm rounded"
         alt="Page not found"
       />
-      <Link to="/" className="btn btn-outline-primary">Home</Link>
+      <Link to="/" className="btn btn-outline-primary rounded-pill">
+        Home
+      </Link>
     </div>
   );
 };
 
-export default transition(NotFound);
+export default NotFound;

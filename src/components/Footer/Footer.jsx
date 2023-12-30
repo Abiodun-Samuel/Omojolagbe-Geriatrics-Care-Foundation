@@ -28,17 +28,20 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6 my-1">
                 <div className="footer-links shadow rounded border border-warning">
                   <h4>Useful Links</h4>
-                  <Link to={"/"} className="d-block my-1">
+                  <Link to={"/"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> Home
                   </Link>
-                  <Link to={"/about"} className="d-block my-1">
+                  <Link to={"/about"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> About
                   </Link>
-                  <Link to={"/gallery"} className="d-block my-1">
+                  <Link to={"/gallery"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> Gallery
                   </Link>
-                  <Link to={"/contact"} className="d-block my-1">
+                  <Link to={"/contact"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> Contact
+                  </Link>
+                  <Link to={"/services"} className="d-block my-1 small">
+                    <VscDebugBreakpointLogUnverified /> Services
                   </Link>
                 </div>
               </div>

@@ -82,10 +82,10 @@ const Header = () => {
               <li className="nav-item me-5 my-sm-1 my-1 my-lg-0">
                 <NavLink
                   className="nav-NavLink d-flex align-items-center"
-                  to="/media"
+                  to="/gallery"
                 >
                   <GrGallery style={{ marginRight: "5px" }} />
-                  Media
+                  Gallery
                 </NavLink>
               </li>
 
