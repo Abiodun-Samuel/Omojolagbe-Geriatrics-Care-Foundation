@@ -14,7 +14,10 @@ const AboutComponent = () => {
             About <span className="text-warning">Us</span>
           </h2>
         </SectionHeader>
-        <div className="row d-flex justify-content-center my-3">
+        <div
+          data-aos="fade-up"
+          className="row d-flex justify-content-center my-3"
+        >
           <div className="col-lg-9 text-center">
             <p className="lead">
               Omojolagbe Geriatrics Care Foundation was established in 2018 in
@@ -26,7 +29,11 @@ const AboutComponent = () => {
             </p>
           </div>
         </div>
-        <div className="row d-flex justify-content-center my-3">
+
+        <div
+          data-aos="fade-up"
+          className="row d-flex justify-content-center my-3"
+        >
           <div className="col-lg-6">
             <div className="about__image">
               <img
@@ -39,7 +46,10 @@ const AboutComponent = () => {
         </div>
 
         <div className="row">
-          <div className="col-lg-3 col-md-6 my-2 d-flex align-items-stretch">
+          <div
+            data-aos="fade-up"
+            className="col-lg-3 col-md-6 my-2 d-flex align-items-stretch"
+          >
             <div className="about__text text-center p-1 shadow rounded border border-1 border-dark">
               <FaHandsHelping className="bg-dark rounded fs-1 text-warning" />
               <p className="fw-normal mt-1">
@@ -49,7 +59,11 @@ const AboutComponent = () => {
             </div>
           </div>
           <div className="col-lg-3 col-md-6 my-2 d-flex align-items-stretch">
-            <div className="about__text text-center p-1 shadow rounded border border-1 border-dark">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="50"
+              className="about__text text-center p-1 shadow rounded border border-1 border-dark"
+            >
               <LiaHandsHelpingSolid className="bg-dark rounded fs-1 text-warning" />
               <p className="fw-normal mt-1">
                 We use all our efforts in taking care of the aged so as to
@@ -57,7 +71,11 @@ const AboutComponent = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 my-2 d-flex align-items-stretch">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="col-lg-3 col-md-6 my-2 d-flex align-items-stretch"
+          >
             <div className="about__text text-center p-1 shadow rounded border border-1 border-dark">
               <RiServiceFill className="bg-dark rounded fs-1 text-warning" />
               <p className="fw-normal mt-1">
@@ -66,7 +84,11 @@ const AboutComponent = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 my-2 d-flex align-items-stretch">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="150"
+            className="col-lg-3 col-md-6 my-2 d-flex align-items-stretch"
+          >
             <div className="about__text text-center p-1 shadow rounded border border-1 border-dark">
               <GrBusinessService className="bg-dark rounded fs-1 text-warning" />
               <p className="fw-normal mt-1">
