@@ -1,8 +1,7 @@
-import transition from "../components/transition";
 import Breadcrump from "../components/common/Breadcrump";
 import HelmetComponent from "../components/common/Helmet";
 
-const Musics = () => {
+const Gallery = () => {
   return (
     <section id="about">
       <HelmetComponent pageTitle="Samuel Ayinde | Songs" />
@@ -13,4 +12,4 @@ const Musics = () => {
   );
 };
 
-export default transition(Musics);
+export default Gallery;

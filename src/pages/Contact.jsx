@@ -1,4 +1,3 @@
-import transition from "../components/transition";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -316,4 +315,4 @@ const Contact = () => {
   );
 };
 
-export default transition(Contact);
+export default Contact;

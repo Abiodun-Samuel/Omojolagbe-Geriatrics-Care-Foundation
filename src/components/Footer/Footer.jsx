@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-top">
             <div className="row">
-              <div className="col-lg-4 col-md-6 my-1">
+              <div data-aos="fade-up" className="col-lg-4 col-md-6 my-1">
                 <div className="rounded shadow-sm">
                   <img src={logo} alt="logo" />
                   <p className="mt-1 small" style={{ lineHeight: "1.75" }}>
@@ -25,7 +25,11 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-6 my-1">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="50"
+                className="col-lg-4 col-md-6 my-1"
+              >
                 <div className="footer-links shadow rounded border border-warning">
                   <h4>Useful Links</h4>
                   <Link to={"/"} className="d-block my-1 small">
@@ -46,7 +50,11 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-12 my-1 ">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="100"
+                className="col-lg-4 col-md-12 my-1 "
+              >
                 <div className="footer-contact shadow">
                   <h4>Contact Us</h4>
                   <p className="small mt-1">
@@ -72,14 +80,14 @@ const Footer = () => {
           </div>
           <hr />
           <div className="footer-bottom text-center">
-            <p className="small my-0">
+            <p className="small mt-0">
               Copyright &copy; <span id="year">{year}.</span> {""}
               <span className="fw-bold">
                 OMOJOLAGBE GERIATRICS CARE FOUNDATION
               </span>
               , All Rights Reserved.
             </p>
-            <p className="small my-0">
+            <p className="small mb-0">
               Designed & Developed by{" "}
               <a
                 href="https://abiodunsamuel.com"

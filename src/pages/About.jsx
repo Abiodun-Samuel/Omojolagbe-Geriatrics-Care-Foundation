@@ -1,6 +1,5 @@
-import transition from "../components/transition";
 import Breadcrump from "../components/common/Breadcrump";
-import profile from "../assets/images/about_img.jpg";
+// import profile from "../assets/images/about_img.jpg";
 import HelmetComponent from "../components/common/Helmet";
 import { FaPodcast } from "react-icons/fa";
 
@@ -18,6 +17,7 @@ const fetchData = async () => {
 fetchData();
 
 const About = () => {
+  let profile;
   return (
     <section id="about">
       <HelmetComponent pageTitle="Samuel Ayinde | About" />
@@ -242,4 +242,4 @@ const About = () => {
   );
 };
 
-export default transition(About);
+export default About;
