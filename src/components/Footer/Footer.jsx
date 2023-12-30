@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-6 my-1">
+              <div className="col-lg-4 col-md-12 my-1 ">
                 <div className="footer-contact shadow">
                   <h4>Contact Us</h4>
                   <p className="small mt-1">
