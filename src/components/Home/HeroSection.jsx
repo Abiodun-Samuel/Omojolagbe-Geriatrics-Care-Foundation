@@ -2,34 +2,12 @@ import { Link } from "react-router-dom";
 
 const HeroComponent = () => {
   return (
-    <section id="hero">
+    <section id="hero__section">
       <div
         id="carouselExampleCaptions"
         className="carousel slide carousel-fade"
         data-bs-ride="carousel"
       >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
         <div className="carousel-inner">
           <div
             className="carousel-item active carousel-one text-center d-flex justify-content-center align-items-center"

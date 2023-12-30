@@ -14,35 +14,42 @@
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+section#about {
+  padding: 5rem 0;
+  margin-top: 5rem;
+}
+/* section header  */
+#section__header {
+  background: url("./assets/images/bg/section_header.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#section__header h2 {
+  font-weight: bold;
+  position: relative;
+  font-size: 1.85rem;
 }
 
 /* hero section  */
-#hero {
+#hero__section {
   position: relative;
 }
-
-#hero h1 {
+#hero__section h1 {
   font-weight: 700;
   font-size: 2.8rem;
   color: #ffffff;
 }
-
-#hero p {
+#hero__section p {
   font-weight: 400;
   color: var(--light);
   font-size: 1.15rem;
   color: #b1b1b1;
   letter-spacing: 0.6px;
 }
-
-#hero .carousel-item {
-  min-height: 720px;
+#hero__section .carousel-item {
+  min-height: 735px;
+  margin-bottom: 5rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -56,23 +63,28 @@
   background-image: url("./assets/images/bg/hero3.jpg");
 }
 
-#hero ol.carousel-indicators li,
-#hero ol.carousel-indicators li.active {
+#hero__section ol.carousel-indicators li,
+#hero__section ol.carousel-indicators li.active {
   width: 1.5rem;
   border-radius: 0;
   border: 0;
 }
 
-#hero ol.carousel-indicators li.active {
+#hero__section ol.carousel-indicators li.active {
   background-color: #b1b1b1;
 }
 
 @media screen and (max-width: 480px) {
-  #hero h1 {
+  #hero__section h1 {
     font-weight: 700;
     font-size: 2.5rem;
     color: #ffffff;
   }
+}
+
+/* about section  */
+#about__section {
+  background: inherit;
 }
 /*
 // `sm` applies to x-small devices (portrait phones, less than 576px)

@@ -1,5 +1,5 @@
-import AboutComponent from "../components/Home/AboutComponent";
-import HeroComponent from "../components/Home/HeroComponent";
+import AboutComponent from "../components/Home/AboutSection";
+import HeroComponent from "../components/Home/HeroSection";
 import PageLayout from "../components/common/PageLayout";
 
 const HomePage = () => {
