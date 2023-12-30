@@ -1,6 +1,6 @@
-import { FaRegAddressCard,  } from "react-icons/fa";
-import { CgMenuGridR, } from "react-icons/cg";
-import { GrGallery ,GrServices} from "react-icons/gr";
+import { FaRegAddressCard } from "react-icons/fa";
+import { CgMenuGridR } from "react-icons/cg";
+import { GrGallery, GrServices } from "react-icons/gr";
 import { AiFillHome } from "react-icons/ai";
 import { AiOutlineProfile } from "react-icons/ai";
 import logo from "../../assets/images/logo/logo-md.png";
@@ -10,7 +10,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-transparent shadow position-fixed w-100 top-0">
+      <nav className="navbar navbar-expand-lg shadow position-fixed w-100 top-0">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
             <img src={logo} alt="logo" width="60" />
@@ -57,7 +57,7 @@ const Header = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                <GrServices style={{ marginRight: "5px" }} />  Services
+                  <GrServices style={{ marginRight: "5px" }} /> Services
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -78,7 +78,7 @@ const Header = () => {
                   </li>
                 </ul>
               </li>
-              
+
               <li className="nav-item me-5 my-sm-1 my-1 my-lg-0">
                 <NavLink
                   className="nav-NavLink d-flex align-items-center"

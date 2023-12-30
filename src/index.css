@@ -7,6 +7,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --green-2: #245140;
+  --green-1: #5a947c;
+  --green-0: #629584;
+
+  --yellow-2: #b0b061;
+  --yellow-1: #efef75;
+  --yellow-0: #fafa2e;
+
+  --grey-2: #273746;
+  --grey-1: #87a59a;
+  --grey-0: #adbbb5;
+
+  --light-1: #bdd1ca;
+  --light-0: #f6f7ef;
+  --shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  --shadow-1: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: light) {
@@ -86,6 +103,89 @@ section#about {
 #about__section {
   background: inherit;
 }
+
+/* footer section  */
+#footer {
+  padding: 5rem 0 1.5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/images/bg/footer_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#footer .footer-top h4 {
+  font-weight: bold;
+  color: #f5f5f5;
+  text-transform: capitalize;
+  position: relative;
+  padding-bottom: 0.7rem;
+  margin: 0.5rem 0;
+}
+
+#footer .footer-top h4::before,
+#footer .footer-top h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2.5px;
+}
+
+#footer .footer-top h4::before {
+  right: 0;
+  background: var(--grey-1);
+}
+
+#footer .footer-top h4::after {
+  background: var(--yellow-0);
+  width: 6rem;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 0 0 1.5rem 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  transition: 0.3s;
+  color: #839192;
+  font-weight: 500;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: var(--yellow-2);
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 2.5rem;
+}
+
+#footer .social-links svg {
+  fill: rgba(150, 150, 150, 0.7);
+  stroke: rgba(150, 150, 150, 0.7);
+  box-shadow: var(--shadow-1);
+}
+
+#footer .social-links svg:hover {
+  fill: var(--yellow-2);
+  stroke: var(--yellow-2);
+}
+
 /*
 // `sm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }

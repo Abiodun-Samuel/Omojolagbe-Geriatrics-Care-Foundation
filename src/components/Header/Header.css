@@ -1,5 +1,6 @@
 .navbar {
   z-index: 1000;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 .nav-NavLink {
   color: #c3c0b3;
