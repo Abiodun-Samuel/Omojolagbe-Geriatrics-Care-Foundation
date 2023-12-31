@@ -32,6 +32,7 @@
 }
 /* section header  */
 section#about__section,
+section#gallery__section,
 section#contact__section {
   padding: 5rem 0;
 }

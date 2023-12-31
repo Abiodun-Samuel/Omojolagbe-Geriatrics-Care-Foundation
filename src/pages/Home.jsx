@@ -1,6 +1,7 @@
 import AboutSection from "../components/Home/AboutSection";
 import GallerySection from "../components/Home/GallerySection";
 import HeroSection from "../components/Home/HeroSection";
+import ServiceSection from "../components/Home/ServiceSection";
 import PageLayout from "../components/common/PageLayout";
 
 const HomePage = () => {
@@ -10,6 +11,7 @@ const HomePage = () => {
         <main>
           <HeroSection />
           <AboutSection />
+          <ServiceSection />
           <GallerySection />
         </main>
       </PageLayout>

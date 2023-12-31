@@ -17,10 +17,10 @@ const AboutComponent = () => {
         </SectionHeader>
         <div
           data-aos="fade-up"
-          className="row d-flex justify-content-center my-3"
+          className="row d-flex justify-content-center mt-2"
         >
           <div className="col-lg-8 text-center">
-            <p className="text-dark">
+            <p className="text-dark lead">
               Omojolagbe Geriatrics Care Foundation was established in 2018 in
               Ibadan, Oyo State Nigeria and fully registered by The Corporate
               Affairs Commission. It is a reputable organization working in the
@@ -39,7 +39,7 @@ const AboutComponent = () => {
 
         <div
           data-aos="fade-up"
-          className="row d-flex justify-content-center my-3"
+          className="row d-flex justify-content-center my-4"
         >
           <div className="col-lg-6">
             <div className="about__image">
