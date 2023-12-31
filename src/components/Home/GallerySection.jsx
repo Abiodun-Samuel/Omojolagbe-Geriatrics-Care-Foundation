@@ -12,10 +12,10 @@ const GallerySection = () => {
             <span className="text-warning">Gallery</span>
           </h2>
         </SectionHeader>
-        <div className="row">
+        <div className="row mt-3">
           <div
             data-aos="fade-up"
-            className="col-lg-6 my-3 d-flex align-items-center"
+            className="col-lg-6 mb-1 d-flex align-items-center"
           >
             <div className="gallery__section">
               <div className="bg-white rounded shadow-sm p-1 mb-1 d-flex gap-1 align-items-start">
@@ -61,7 +61,7 @@ const GallerySection = () => {
           <div
             data-aos="fade-up"
             data-aos-delay="100"
-            className="col-lg-6 my-3 d-flex align-items-end"
+            className="col-lg-6 mb-1 d-flex align-items-end"
           >
             <div className="gallery__section">
               <img src={gallery} alt="gallery" className="img-fluid" />
