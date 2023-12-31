@@ -30,7 +30,7 @@ const AboutComponent = () => {
             </p>
             <Link
               to={"/about"}
-              className="btn btn-outline-primary rounded-pill btn-sm"
+              className="btn btn-outline-primary rounded-pill"
             >
               Read More
             </Link>

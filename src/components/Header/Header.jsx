@@ -33,7 +33,7 @@ const Header = () => {
             <ul className="navbar-nav m-auto">
               <li className="nav-item me-5 my-sm-1 my-1 my-lg-0">
                 <NavLink
-                  className="nav-NavLink  d-flex align-items-center"
+                  className="nav-NavLink  d-flex align-items-center rounded-pill"
                   aria-current="page"
                   to="/"
                 >
@@ -42,7 +42,7 @@ const Header = () => {
               </li>
               <li className="nav-item me-5 my-sm-1 my-1 my-lg-0">
                 <NavLink
-                  className="nav-NavLink d-flex align-items-center"
+                  className="nav-NavLink d-flex align-items-center rounded-pill"
                   to="/about"
                 >
                   <AiOutlineProfile style={{ marginRight: "5px" }} />
@@ -51,7 +51,7 @@ const Header = () => {
               </li>
               <li className="nav-item dropdown me-5 my-sm-1 my-1 my-lg-0">
                 <a
-                  className="nav-NavLink d-flex align-items-center dropdown-toggle"
+                  className="nav-NavLink d-flex align-items-center dropdown-toggle rounded-pill"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -81,7 +81,7 @@ const Header = () => {
 
               <li className="nav-item me-5 my-sm-1 my-1 my-lg-0">
                 <NavLink
-                  className="nav-NavLink d-flex align-items-center"
+                  className="nav-NavLink d-flex align-items-center rounded-pill"
                   to="/gallery"
                 >
                   <GrGallery style={{ marginRight: "5px" }} />
@@ -91,7 +91,7 @@ const Header = () => {
 
               <li className="nav-item me-5 my-sm-1 my-1 my-lg-0">
                 <NavLink
-                  className="nav-NavLink d-flex align-items-center"
+                  className="nav-NavLink d-flex align-items-center rounded-pill"
                   to="/contact"
                 >
                   <FaRegAddressCard style={{ marginRight: "5px" }} /> Contact

@@ -23,10 +23,10 @@ const HeroComponent = () => {
                   elderly.
                 </p>
                 <div className="mt-3">
-                  <Link to="/services" className="btn btn-warning">
+                  <Link to="/services" className="btn btn-warning rounded-pill">
                     Services
                   </Link>
-                  <Link to="/contact" className="btn btn-outline-warning mx-2">
+                  <Link to="/contact" className="btn btn-outline-warning mx-2 rounded-pill">
                     Contact
                   </Link>
                 </div>
@@ -47,10 +47,10 @@ const HeroComponent = () => {
                   elderly.
                 </p>
                 <div className="mt-3">
-                  <Link to="/services" className="btn btn-warning">
+                  <Link to="/services" className="btn btn-warning rounded-pill">
                     Services
                   </Link>
-                  <Link to="/contact" className="btn btn-outline-warning mx-2">
+                  <Link to="/contact" className="btn btn-outline-warning mx-2 rounded-pill">
                     Contact
                   </Link>
                 </div>
@@ -71,10 +71,13 @@ const HeroComponent = () => {
                   elderly.
                 </p>
                 <div className="mt-3">
-                  <Link to="/services" className="btn btn-warning">
+                  <Link to="/services" className="btn btn-warning rounded-pill">
                     Services
                   </Link>
-                  <Link to="/contact" className="btn btn-outline-warning mx-2">
+                  <Link
+                    to="/contact"
+                    className="btn btn-outline-warning mx-2 rounded-pill"
+                  >
                     Contact
                   </Link>
                 </div>

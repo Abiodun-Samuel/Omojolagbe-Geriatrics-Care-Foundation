@@ -21,9 +21,9 @@ const GallerySection = () => {
               <div className="bg-white rounded shadow-sm p-1 mb-1 d-flex gap-1 align-items-start">
                 <div>
                   <p
-                    style={{ padding: "4px", background: "#eae8f6" }}
+                    style={{ padding: "3.5px", background: "#242424" }}
                     title="Gallery"
-                    className="rounded-circle shadow border-2 border btn btn-md btn-outline-primary"
+                    className="rounded-circle shadow border-2 border btn btn-md btn-outline-warning"
                   >
                     <FaPodcast />
                   </p>
@@ -36,9 +36,9 @@ const GallerySection = () => {
               <div className="bg-white rounded shadow-sm p-1 mb-1 d-flex gap-1 align-items-start">
                 <div>
                   <p
-                    style={{ padding: "4px", background: "#eae8f6" }}
+                    style={{ padding: "3.5px", background: "#242424" }}
                     title="Gallery"
-                    className="rounded-circle shadow border-2 border btn btn-md btn-outline-primary"
+                    className="rounded-circle shadow border-2 border btn btn-md btn-outline-warning"
                   >
                     <FaPodcast />
                   </p>
