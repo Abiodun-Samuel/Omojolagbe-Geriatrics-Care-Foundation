@@ -63,9 +63,11 @@ section#contact__section {
   color: #b1b1b1;
   letter-spacing: 0.6px;
 }
+#hero__section .carousel-inner {
+  min-height: 735px;
+}
 #hero__section .carousel-item {
   min-height: 735px;
-  margin-bottom: 5rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
