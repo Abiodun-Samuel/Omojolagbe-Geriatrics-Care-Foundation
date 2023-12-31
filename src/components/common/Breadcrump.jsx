@@ -1,21 +1,23 @@
 import { Link } from "react-router-dom";
-const Breadcrump = ({ page }) => {
+import PropTypes from "prop-types";
+
+const Breadcrump = ({ page, children }) => {
   return (
-    <section className="inner">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 p-1 rounded text-center">
-            <h1 className="text-white fs-1">{page}</h1>
-            <p>
-              <Link className="text-secondary" to="/">
-                Home
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="text-center" id="page_header">
+      {children}
+      <p className="mt-1">
+        <Link className="text-primary fw-bold" to="/">
+          Home
+        </Link>{" "}
+        / <span>{page}</span>
+      </p>
+    </div>
   );
+};
+
+Breadcrump.propTypes = {
+  page: PropTypes.string,
+  children: PropTypes.element,
 };
 
 export default Breadcrump;

@@ -1,14 +1,19 @@
 import Breadcrump from "../components/common/Breadcrump";
-import HelmetComponent from "../components/common/Helmet";
+import PageLayout from "../components/common/PageLayout";
 
 const Gallery = () => {
+  let pageTitle = "Gallery";
   return (
-    <section id="about">
-      <HelmetComponent pageTitle="Samuel Ayinde | Songs" />
-      <div className="container vh-100">
-        <Breadcrump page="All Songs" />
-      </div>
-    </section>
+    <PageLayout pageTitle={pageTitle}>
+      <Breadcrump page={pageTitle}>
+        <h1 className="text-light fw-bolder my-0 p-1 fs-1">
+          <span className="text-warning">{pageTitle}</span>
+        </h1>
+      </Breadcrump>
+      <section id="gallery__page">
+        <div className="container vh-100"></div>
+      </section>
+    </PageLayout>
   );
 };
 

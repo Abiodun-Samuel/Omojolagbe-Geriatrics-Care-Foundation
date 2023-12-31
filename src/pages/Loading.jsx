@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 const Loading = () => {
   return (
     <div
@@ -54,9 +53,6 @@ const Loading = () => {
           ></animate>
         </path>
       </svg>
-      <Link to="/" className="btn btn-outline-primary rounded-pill">
-        Home
-      </Link>
     </div>
   );
 };
