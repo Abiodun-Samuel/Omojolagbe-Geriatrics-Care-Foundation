@@ -1,7 +1,5 @@
 :root {
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -164,12 +162,14 @@ section#contact__section {
 /* pages  */
 section#about__page,
 section#contact__page,
-section#gallery__page {
+section#gallery__page,
+section#homeservices__page, 
+section#carefoundation__page {
   padding: 5rem 0;
 }
 /* page header  */
 #page_header {
-  margin-top: 8.5rem;
+  padding-top: 8.5rem;
 }
 #page_header h1 {
   background: url("./assets/images/bg/section_header.png");

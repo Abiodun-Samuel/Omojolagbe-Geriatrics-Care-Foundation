@@ -1,5 +1,5 @@
-import AboutComponent from "../components/Home/AboutSection";
-import HeroComponent from "../components/Home/HeroSection";
+import AboutSection from "../components/Home/AboutSection";
+import HeroSection from "../components/Home/HeroSection";
 import PageLayout from "../components/common/PageLayout";
 
 const HomePage = () => {
@@ -7,8 +7,8 @@ const HomePage = () => {
     <>
       <PageLayout pageTitle="Home">
         <main>
-          <HeroComponent />
-          <AboutComponent />
+          <HeroSection />
+          <AboutSection />
         </main>
       </PageLayout>
     </>

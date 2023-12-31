@@ -64,8 +64,8 @@ const Contact = () => {
 
   return (
     <>
-      <PageLayout pageTitle={pageTitle}>
-        <Breadcrump page={pageTitle}>
+      <PageLayout pageTitle={`${pageTitle} Us`}>
+        <Breadcrump page={`${pageTitle} Us`}>
           <h1 className="text-light fw-bolder my-0 p-1 fs-1">
             <span className="text-warning">{pageTitle} </span> Us
           </h1>

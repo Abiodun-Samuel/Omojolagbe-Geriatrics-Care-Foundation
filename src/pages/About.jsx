@@ -6,8 +6,8 @@ const About = () => {
   let profile;
   let pageTitle = "About";
   return (
-    <PageLayout pageTitle={pageTitle}>
-      <Breadcrump page={pageTitle}>
+    <PageLayout pageTitle={`${pageTitle} Us`}>
+      <Breadcrump page={`${pageTitle} Us`}>
         <h1 className="text-light fw-bolder my-0 p-1 fs-1">
           {pageTitle} <span className="text-warning">Us</span>
         </h1>
