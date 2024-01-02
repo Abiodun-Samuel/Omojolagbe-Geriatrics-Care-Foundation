@@ -1,19 +1,20 @@
 // import emailjs from "@emailjs/browser";
-import { useState } from "react";
+// import { useState } from "react";
 // import toast from "react-hot-toast";
 import Breadcrump from "../components/common/Breadcrump";
 import PageLayout from "../components/common/PageLayout";
+import construction from "../assets/images/img/construction.jpg";
 
 const Contact = () => {
   let pageTitle = "Contact";
   // const [loading, setLoading] = useState(false);
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  // const [form, setForm] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -56,11 +57,11 @@ const Contact = () => {
   //     );
   // };
 
-  const handleChange = (e) => {
-    setForm((prev) => {
-      return { ...prev, [e.target.name]: e.target.value };
-    });
-  };
+  // const handleChange = (e) => {
+  //   setForm((prev) => {
+  //     return { ...prev, [e.target.name]: e.target.value };
+  //   });
+  // };
 
   return (
     <>
@@ -73,9 +74,14 @@ const Contact = () => {
 
         <section id="contact__page">
           <div className="container">
-            <div className="row my-3">
-              <div className="col-lg-6 mb-2">
-                <div className="shadow bg-white rounded p-1">
+            <div className="row d-flex justify-content-center">
+              <div className="col-lg-4 mb-2">
+                <img
+                  src={construction}
+                  alt="construction"
+                  className="img-fluid"
+                />
+                {/* <div className="shadow bg-white rounded p-1">
                   <h4 className="lead my-1 text-radial fs-2 fw-bolder">
                     GET IN TOUCH
                   </h4>
@@ -116,7 +122,6 @@ const Contact = () => {
                       required
                       rows="5"
                     ></textarea>
-                    {/* <button onClick={handleSubmit} className="btn btn-primary mt-1"> */}
                     <a
                       className="btn btn-primary mt-1 px-3"
                       href={`mailto:sasamuelayinde@gmail.com?subject=${encodeURI(
@@ -127,24 +132,26 @@ const Contact = () => {
                     >
                       Send
                     </a>
-                    {/* {loading ? (
+                  </form>
+                </div> */}
+              </div>
+              {/* <div className="col-lg-6 mb-2">
+                <div className="bg-white shadow rounded p-1">
+                  <div className="contact__image shadow">
+                    <h1 className="text-white fw-bolder">Social Media</h1>
+                  </div>
+                </div>
+              </div> */}
+
+              {/* <button onClick={handleSubmit} className="btn btn-primary mt-1"> */}
+              {/* {loading ? (
                     <span
                       className="spinner-border spinner-border-sm mx-1"
                       role="status"
                       aria-hidden="true"
                     ></span>
                   ) : null} */}
-                    {/* </button> */}
-                  </form>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-2">
-                <div className="bg-white shadow rounded p-1">
-                  <div className="contact__image shadow">
-                    <h1 className="text-white fw-bolder">Social Media</h1>
-                  </div>
-                </div>
-              </div>
+              {/* </button> */}
             </div>
           </div>
         </section>

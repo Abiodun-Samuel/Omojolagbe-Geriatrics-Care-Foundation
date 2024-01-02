@@ -1,4 +1,5 @@
 import AboutSection from "../components/Home/AboutSection";
+import ContactSection from "../components/Home/ContactSection";
 import GallerySection from "../components/Home/GallerySection";
 import HeroSection from "../components/Home/HeroSection";
 import ServiceSection from "../components/Home/ServiceSection";
@@ -12,6 +13,7 @@ const HomePage = () => {
           <HeroSection />
           <AboutSection />
           <ServiceSection />
+          <ContactSection />
           <GallerySection />
         </main>
       </PageLayout>

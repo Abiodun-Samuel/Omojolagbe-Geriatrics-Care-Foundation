@@ -1,5 +1,6 @@
 import Breadcrump from "../../components/common/Breadcrump";
 import PageLayout from "../../components/common/PageLayout";
+import construction from "../../assets/images/img/construction.jpg";
 
 const HomeServices = () => {
   let pageTitle = "Home";
@@ -11,7 +12,17 @@ const HomeServices = () => {
         </h1>
       </Breadcrump>
       <section id="homeservices__page">
-        <div className="container vh-100"></div>
+        <div className="container vh-100">
+          <div className="row d-flex justify-content-center">
+            <div className="col-lg-4">
+              <img
+                src={construction}
+                alt="construction"
+                className="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </PageLayout>
   );

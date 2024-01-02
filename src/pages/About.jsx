@@ -1,9 +1,10 @@
 import Breadcrump from "../components/common/Breadcrump";
 import PageLayout from "../components/common/PageLayout";
-import { FaPodcast } from "react-icons/fa";
+import construction from "../assets/images/img/construction.jpg";
+// import { FaPodcast } from "react-icons/fa";
 
 const About = () => {
-  let profile;
+  // let profile;
   let pageTitle = "About";
   return (
     <PageLayout pageTitle={`${pageTitle} Us`}>
@@ -14,8 +15,15 @@ const About = () => {
       </Breadcrump>
       <section id="about__page">
         <div className="container">
-          <div className="row my-3 d-flex align-items-stretch">
-            <div className="col-lg-4 col-md-6">
+          <div className="row d-flex justify-content-center">
+            <div className="col-lg-4">
+              <img
+                src={construction}
+                alt="construction"
+                className="img-fluid"
+              />
+            </div>
+            {/* <div className="col-lg-4 col-md-6">
               <div className="about__desc bg-white rounded shadow-sm p-1 mb-2 d-flex gap-1 align-items-start">
                 <div>
                   <p
@@ -98,7 +106,7 @@ const About = () => {
                   in view.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

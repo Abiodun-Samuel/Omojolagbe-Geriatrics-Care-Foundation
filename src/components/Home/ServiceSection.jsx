@@ -15,7 +15,7 @@ const ServiceSection = () => {
             <img
               style={{
                 transform: "scaleX(-1)",
-                webkitTransform: "scaleX(-1)",
+                WebkitTransform: "scaleX(-1)",
               }}
               className="d-none d-lg-block"
               src={arrow}
@@ -25,7 +25,7 @@ const ServiceSection = () => {
           </div>
           <div
             data-aos="fade-up"
-            data-aos-delay="50"
+            data-aos-delay="100"
             className="col-lg-6 d-flex align-items-center mb-3"
           >
             <div>
@@ -52,7 +52,6 @@ const ServiceSection = () => {
 
           <div
             data-aos="fade-up"
-            data-aos-delay="100"
             className="col-lg-6 d-flex align-items-center mb-3"
           >
             <div>
@@ -78,7 +77,7 @@ const ServiceSection = () => {
 
           <div
             data-aos="fade-up"
-            data-aos-delay="150"
+            data-aos-delay="100"
             className="col-lg-6 mb-3 text-end d-flex align-items-center"
           >
             <img
