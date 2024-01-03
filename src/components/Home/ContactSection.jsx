@@ -2,6 +2,7 @@ import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
 import { FaFacebook } from "react-icons/fa";
 import SectionHeader from "../common/SectionHeader";
 import { MdPhoneInTalk } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   return (
@@ -25,10 +26,14 @@ const ContactSection = () => {
                   questions, need assistance, or simply want to connect, our
                   team is ready to help.
                 </p>
-                <div className="d-flex gap-1 flex-column flex-wrap justify-content-center mt-2">
+                <div className="text-center mt-2">
                   <a
-                    className="small my-0"
-                    style={{ color: "#909090", textDecoration: "underline" }}
+                    className="small d-block"
+                    style={{
+                      color: "#909090",
+                      textDecoration: "underline",
+                      margin: "5px 0",
+                    }}
                     href="mailto:omojolagbehomecareservices1902@gmail.com"
                   >
                     <HiOutlineMail
@@ -39,8 +44,12 @@ const ContactSection = () => {
                   </a>
                   <a
                     href="mailto:omojolagbegeriatriccarefoundat@gmail.com"
-                    className="small my-0"
-                    style={{ color: "#909090", textDecoration: "underline" }}
+                    className="small d-block"
+                    style={{
+                      color: "#909090",
+                      textDecoration: "underline",
+                      margin: "5px 0",
+                    }}
                   >
                     <HiOutlineMailOpen
                       className="fs-3 text-warning"
@@ -50,7 +59,7 @@ const ContactSection = () => {
                   </a>
                   <a
                     href="tel:+2348057015681"
-                    className="small my-0"
+                    className="small d-block"
                     style={{ color: "#909090", textDecoration: "underline" }}
                   >
                     <MdPhoneInTalk
@@ -61,8 +70,12 @@ const ContactSection = () => {
                   </a>
                   <a
                     href="tel:+2348147551902"
-                    className="small my-0"
-                    style={{ color: "#909090", textDecoration: "underline" }}
+                    className="small d-block"
+                    style={{
+                      color: "#909090",
+                      textDecoration: "underline",
+                      margin: "5px 0",
+                    }}
                   >
                     <MdPhoneInTalk
                       className="fs-3 text-warning"
@@ -72,8 +85,12 @@ const ContactSection = () => {
                   </a>
                   <a
                     href="https://web.facebook.com/profile.php?id=100081814689135"
-                    className="small my-0"
-                    style={{ color: "#909090", textDecoration: "underline" }}
+                    className="small d-block"
+                    style={{
+                      color: "#909090",
+                      textDecoration: "underline",
+                      margin: "5px 0",
+                    }}
                   >
                     <FaFacebook
                       className="fs-3 text-warning"
@@ -81,6 +98,12 @@ const ContactSection = () => {
                     />
                     Connect with us on Facebook
                   </a>
+                  <Link
+                    to={"/contact"}
+                    className="btn btn-outline-warning mt-2 rounded-pill btn-block"
+                  >
+                    Contact Us Now &#8594;
+                  </Link>
                 </div>
               </div>
             </div>

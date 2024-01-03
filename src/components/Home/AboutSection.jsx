@@ -32,7 +32,7 @@ const AboutComponent = () => {
               to={"/about"}
               className="btn btn-outline-primary rounded-pill"
             >
-              Read More
+              Read More &#8594;
             </Link>
           </div>
         </div>
