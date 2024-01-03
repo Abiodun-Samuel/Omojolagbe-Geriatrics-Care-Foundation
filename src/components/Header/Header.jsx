@@ -65,7 +65,7 @@ const Header = () => {
                       to={"/service/care-foundation"}
                       className="dropdown-item"
                     >
-                      Omojolagbe Geriatrics Care Foundation
+                      Omojolagbe Geriatric Care Foundation
                     </Link>
                   </li>
                   <li>

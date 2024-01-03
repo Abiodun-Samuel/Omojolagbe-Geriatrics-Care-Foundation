@@ -39,7 +39,7 @@ const ServiceSection = () => {
                 </h2>
               </SectionHeader>
               <p className="my-2 text-dark text-center">
-                At Omojolagbe Geriatrics Care Foundation, we understand the
+                At Omojolagbe Geriatric Care Foundation, we understand the
                 unique needs and challenges that come with aging. Our mission is
                 to provide compassionate and reliable personal care services
                 tailored specifically for seniors, ensuring a life of dignity,
@@ -67,7 +67,7 @@ const ServiceSection = () => {
                 </h2>
               </SectionHeader>
               <p className="my-2 text-dark text-center">
-                At Omojolagbe Geriatrics Care Foundation, we`re dedicated to
+                At Omojolagbe  Care Foundation, we`re dedicated to
                 providing more than just care; were committed to enhancing
                 qualify of lives. Our trained caregivers engage seniors in
                 meaningful activities, conversations, and outings to foster

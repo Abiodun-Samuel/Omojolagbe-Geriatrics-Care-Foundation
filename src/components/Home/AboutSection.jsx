@@ -21,7 +21,7 @@ const AboutComponent = () => {
         >
           <div className="col-lg-8 text-center">
             <p className="text-dark text-dark">
-              Omojolagbe Geriatrics Care Foundation was established in 2018 in
+              Omojolagbe Geriatric Care Foundation was established in 2018 in
               Ibadan, Oyo State Nigeria and fully registered by The Corporate
               Affairs Commission. It is a reputable organization working in the
               way of creating healthier, happier and fruitful life for the aged.
