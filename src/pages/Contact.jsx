@@ -1,67 +1,26 @@
-// import emailjs from "@emailjs/browser";
-// import { useState } from "react";
-// import toast from "react-hot-toast";
+import { useState } from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaPhoneSquare } from "react-icons/fa";
 import Breadcrump from "../components/common/Breadcrump";
 import PageLayout from "../components/common/PageLayout";
-import construction from "../assets/images/img/construction.jpg";
+import { MdPhoneInTalk } from "react-icons/md";
+import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
 
 const Contact = () => {
   let pageTitle = "Contact";
-  // const [loading, setLoading] = useState(false);
 
-  // const [form, setForm] = useState({
-  //   name: "",
-  //   email: "",
-  //   subject: "",
-  //   message: "",
-  // });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!form.name.length || !form.email.length || !form.message.length)
-  //     return null;
-  //   setLoading(true);
-  //   emailjs
-  //     .send(
-  //       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-  //       import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-  //       {
-  //         from_name: form.name,
-  //         to_name: "Samuel Ayinde",
-  //         from_email: form.email,
-  //         to_email: "sasamuelayinde@gmail.com",
-  //         message: form.message,
-  //       },
-  //       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-  //     )
-  //     .then(
-  //       () => {
-  //         setLoading(false);
-  //         toast.success(
-  //           "Thank you. I will get back to you as soon as possible",
-  //           {
-  //             duration: 5000,
-  //           }
-  //         );
-  //         setForm({
-  //           name: "",
-  //           email: "",
-  //           subject: "",
-  //           message: "",
-  //         });
-  //       },
-  //       (error) => {
-  //         setLoading(false);
-  //         toast.error("Error, Unable to send message try again");
-  //       }
-  //     );
-  // };
-
-  // const handleChange = (e) => {
-  //   setForm((prev) => {
-  //     return { ...prev, [e.target.name]: e.target.value };
-  //   });
-  // };
+  const handleChange = (e) => {
+    setForm((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  };
 
   return (
     <>
@@ -75,17 +34,11 @@ const Contact = () => {
         <section id="contact__page">
           <div className="container">
             <div className="row d-flex justify-content-center">
-              <div className="col-lg-4 mb-2">
-                <img
-                  src={construction}
-                  alt="construction"
-                  className="img-fluid"
-                />
-                {/* <div className="shadow bg-white rounded p-1">
-                  <h4 className="lead my-1 text-radial fs-2 fw-bolder">
-                    GET IN TOUCH
+              <div className="col-lg-5 shadow bg-white p-1">
+                <div className="">
+                  <h4 className="my-1 fs-4 fw-bolder text-dark">
+                    Get In Touch
                   </h4>
-
                   <form>
                     <input
                       type="text"
@@ -124,7 +77,7 @@ const Contact = () => {
                     ></textarea>
                     <a
                       className="btn btn-primary mt-1 px-3"
-                      href={`mailto:sasamuelayinde@gmail.com?subject=${encodeURI(
+                      href={`mailto:omojolagbegeriatriccarefoundat@gmail.com?subject=${encodeURI(
                         form.subject
                       )}&body=${encodeURI(
                         form.message
@@ -133,25 +86,33 @@ const Contact = () => {
                       Send
                     </a>
                   </form>
-                </div> */}
-              </div>
-              {/* <div className="col-lg-6 mb-2">
-                <div className="bg-white shadow rounded p-1">
-                  <div className="contact__image shadow">
-                    <h1 className="text-white fw-bolder">Social Media</h1>
-                  </div>
                 </div>
-              </div> */}
+              </div>
+              <div className="col-lg-4 contact__page-details shadow p-1">
+                <h4 className="my-1 fs-4 fw-bolder text-light">Contact Info</h4>
 
-              {/* <button onClick={handleSubmit} className="btn btn-primary mt-1"> */}
-              {/* {loading ? (
-                    <span
-                      className="spinner-border spinner-border-sm mx-1"
-                      role="status"
-                      aria-hidden="true"
-                    ></span>
-                  ) : null} */}
-              {/* </button> */}
+                <p className="small mt-5" style={{ color: "#909090" }}>
+                  <FaLocationDot className="fs-3 text-warning" /> No 15, Akin
+                  Alabi Street Welder B/S, Alakia-Isebo Road, Ibadan, Oyo state
+                  Nigeria.
+                </p>
+                <p className="small" style={{ color: "#909090" }}>
+                  <MdPhoneInTalk className="fs-3 text-warning" />
+                  +2348057015681
+                </p>
+                <p className="small" style={{ color: "#909090" }}>
+                  <FaPhoneSquare className="fs-3 text-warning" />
+                  +2348147551902
+                </p>
+                <p className="small" style={{ color: "#909090" }}>
+                  <HiOutlineMail className="fs-3 text-warning" />
+                  omojolagbehomecareservices1902@gmail.com
+                </p>
+                <p className="small" style={{ color: "#909090" }}>
+                  <HiOutlineMailOpen className="fs-3 text-warning" />
+                  omojolagbegeriatriccarefoundat@gmail.com
+                </p>
+              </div>
             </div>
           </div>
         </section>

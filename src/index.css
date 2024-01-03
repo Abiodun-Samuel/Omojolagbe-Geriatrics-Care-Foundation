@@ -20,7 +20,7 @@
 
   --light-1: #bdd1ca;
   --light-0: #f6f7ef;
-  /* --light-0: #909090; */
+
   --shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   --shadow-1: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
@@ -107,8 +107,7 @@ section#contact__section {
   background: inherit;
 }
 .about__obj {
-  background: 
-    url("./assets/images/bg/about-bg.jpg");
+  background: url("./assets/images/bg/about-bg.jpg");
   background-position: center;
   background-size: cover;
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
@@ -185,7 +184,7 @@ section#contact__page,
 section#gallery__page,
 section#homeservices__page,
 section#carefoundation__page {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 /* page header  */
 #page_header {
@@ -196,7 +195,13 @@ section#carefoundation__page {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/* contact page  */
+.contact__page-details {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/images/bg/contact-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
 /*
 // `sm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }
