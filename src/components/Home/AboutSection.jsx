@@ -37,8 +37,8 @@ const AboutComponent = () => {
           </div>
         </div>
 
-        <div className="row mt-3">
-          <div data-aos="fade-up" className="col-lg-6 mb-2">
+        <div className="row mt-3 d-flex justify-content-center">
+          <div data-aos="fade-up" className="col-lg-6 mb-2 ">
             <div className="about__image">
               <img
                 src={aboutImageMain}
@@ -47,87 +47,67 @@ const AboutComponent = () => {
               />
             </div>
           </div>
-          <div className="col-lg-6 mb-2">
-            <div
-              data-aos="fade-up"
-              data-aos-delay="50"
-              className="bg-white rounded shadow border border-1 px-1 mb-1 d-flex gap-1 align-items-start"
-              style={{ paddingTop: "15px", paddingBottom: "10px" }}
-            >
-              <div>
-                <p
-                  style={{ padding: "3.5px", background: "#242424" }}
-                  title="Gallery"
-                  className="rounded-circle shadow border-2 border btn btn-md btn-outline-warning"
-                >
-                  <FaHandsHelping />
+        </div>
+      </div>
+
+      <div className="about__obj py-5">
+        <div className="container py-5">
+          <div className="row d-flex justify-content-center py-2">
+            <div className="col-lg-4 col-md-6 d-flex flex-column">
+              <div
+                data-aos="fade-up"
+                className="d-flex my-2 rounded border border-1 p-1"
+              >
+                <div>
+                  <FaHandsHelping className="fs-1 text-warning me-1" />
+                </div>
+                <p className="small my-0 text-light">
+                  We provide high quality health care services that are
+                  efficient and supportive to the elderly persons.
                 </p>
               </div>
-              <p className="">
-                We provide high quality health care services that are efficient
-                and supportive to the elderly persons.
-              </p>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="50"
+                className="d-flex my-2 rounded border border-1 p-1"
+              >
+                <div>
+                  <LiaHandsHelpingSolid className="fs-1 text-warning me-1" />
+                </div>
+                <p className="small my-0 text-light">
+                  We use all our efforts in taking care of the aged so as to
+                  regain their independence and active ageing.
+                </p>
+              </div>
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className="bg-white rounded shadow border border-1 px-1 mb-1 d-flex gap-1 align-items-start"
-              style={{ paddingTop: "15px", paddingBottom: "10px" }}
-            >
-              <div>
-                <p
-                  style={{ padding: "3.5px", background: "#242424" }}
-                  title="Gallery"
-                  className="rounded-circle shadow border-2 border btn btn-md btn-outline-warning"
-                >
-                  <LiaHandsHelpingSolid />
+            <div className="col-lg-4 col-md-6 d-flex flex-column">
+              <div
+                data-aos-delay="100"
+                data-aos="fade-up"
+                className="d-flex my-2 rounded border border-1 p-1"
+              >
+                <div>
+                  <RiServiceFill className="fs-1 text-warning me-1" />
+                </div>
+                <p className="small my-0 text-light">
+                  We conduct empowerment program for the vulnerable among the
+                  elderly.
                 </p>
               </div>
-              <p className="">
-                We use all our efforts in taking care of the aged so as to
-                regain their independence and active ageing.
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="150"
-              className="bg-white rounded shadow border border-1 px-1 mb-1 d-flex gap-1 align-items-start"
-              style={{ paddingTop: "15px", paddingBottom: "10px" }}
-            >
-              <div>
-                <p
-                  style={{ padding: "3.5px", background: "#242424" }}
-                  title="Gallery"
-                  className="rounded-circle shadow border-2 border btn btn-md btn-outline-warning"
-                >
-                  <RiServiceFill />
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                className="d-flex my-2 rounded border border-1 p-1"
+              >
+                <div>
+                  <GrBusinessService className="fs-1 text-warning me-1" />
+                </div>
+                <p className="small my-0 text-light">
+                  We collaborate with relevant organizations within and outside
+                  the country also to provide support and structure for the
+                  elderly.
                 </p>
               </div>
-              <p className="">
-                We conduct empowerment program for the vulnerable among the
-                elderly.
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="200"
-              className="bg-white rounded shadow border border-1 px-1 mb-1 d-flex gap-1 align-items-start"
-              style={{ paddingTop: "15px", paddingBottom: "10px" }}
-            >
-              <div>
-                <p
-                  style={{ padding: "3.5px", background: "#242424" }}
-                  title="Gallery"
-                  className="rounded-circle shadow border-2 border btn btn-md btn-outline-warning"
-                >
-                  <GrBusinessService />
-                </p>
-              </div>
-              <p className="">
-                We collaborate with relevant organizations within and outside
-                the country also to provide support and structure for the
-                elderly.
-              </p>
             </div>
           </div>
         </div>

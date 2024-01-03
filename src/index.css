@@ -106,6 +106,13 @@ section#contact__section {
 #about__section {
   background: inherit;
 }
+.about__obj {
+  background: 
+    url("./assets/images/bg/about-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+}
 
 /* contact section   */
 #contact__section {
