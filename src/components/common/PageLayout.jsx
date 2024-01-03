@@ -15,7 +15,7 @@ const PageLayout = ({ children, pageTitle }) => {
   return (
     <>
       <HelmetComponent
-        pageTitle={`${pageTitle} | OMOJOLAGBE GERIATRIC CARE FOUNDATION`}
+        pageTitle={`${pageTitle} | Omojolagbe Geriatric Care Foundation`}
       />
 
       <motion.div

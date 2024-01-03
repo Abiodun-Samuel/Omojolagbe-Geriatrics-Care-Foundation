@@ -38,7 +38,7 @@ const Contact = () => {
                 <div className="">
                   <h4 className="my-1 fs-4 fw-bolder text-dark">
                     Get In Touch
-                  </h4>
+                  </h4>F
                   <form>
                     <input
                       type="text"

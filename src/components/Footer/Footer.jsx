@@ -16,11 +16,11 @@ const Footer = () => {
                 <div className="rounded shadow-sm">
                   <img src={logo} alt="logo" />
                   <p className="mt-1 small" style={{ lineHeight: "1.75" }}>
-                    Omojolagbe Geriatric Care Foundation was established in
-                    2018 in Ibadan, Oyo State Nigeria and fully registered by
-                    The Corporate Affairs Commission. It is a reputable
-                    organization working in the way of creating healthier,
-                    happier and fruitful life for the aged.
+                    Omojolagbe Geriatric Care Foundation was established in 2018
+                    in Ibadan, Oyo State Nigeria and fully registered by The
+                    Corporate Affairs Commission. It is a reputable organization
+                    working in the way of creating healthier, happier and
+                    fruitful life for the aged.
                   </p>
                 </div>
               </div>
@@ -44,9 +44,9 @@ const Footer = () => {
                   <Link to={"/contact"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> Contact
                   </Link>
-                  <Link to={"/services"} className="d-block my-1 small">
+                  {/* <Link to={"/services"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> Services
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -83,7 +83,7 @@ const Footer = () => {
             <p className="small mt-0">
               Copyright &copy; <span id="year">{year}.</span> {""}
               <span className="fw-bold">
-                OMOJOLAGBE GERIATRIC CARE FOUNDATION
+                Omojolagbe Geriatric Care Foundation
               </span>
               , All Rights Reserved.
             </p>
