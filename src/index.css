@@ -20,7 +20,7 @@
 
   --light-1: #bdd1ca;
   --light-0: #f6f7ef;
-  /* --light-0: #c5c5c5; */
+  /* --light-0: #909090; */
   --shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   --shadow-1: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
@@ -108,11 +108,12 @@ section#contact__section {
 }
 
 /* contact section   */
-#contact__section .contact__section-box {
+#contact__section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/images/bg/contact-bg.jpg");
   background-position: center;
   background-size: cover;
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
 }
 
 /* footer section  */

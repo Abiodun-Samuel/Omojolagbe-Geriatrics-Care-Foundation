@@ -28,7 +28,7 @@ const GallerySection = () => {
                     <FaPodcast />
                   </p>
                 </div>
-                <p className="lead">
+                <p className="">
                   Dive into our captivating collection of images and videos that
                   encapsulate moments, stories, and the essence of our journey.
                 </p>
@@ -43,7 +43,7 @@ const GallerySection = () => {
                     <FaPodcast />
                   </p>
                 </div>
-                <p className="lead">
+                <p className="">
                   Each image and video captures the unique beauty of aging — a
                   mosaic of experiences, laughter, resilience, and cherished
                   memories.

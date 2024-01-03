@@ -1,4 +1,5 @@
 import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
+import { FaFacebook } from "react-icons/fa";
 import SectionHeader from "../common/SectionHeader";
 import { MdPhoneInTalk } from "react-icons/md";
 
@@ -24,19 +25,62 @@ const ContactSection = () => {
                   questions, need assistance, or simply want to connect, our
                   team is ready to help.
                 </p>
-                <div className="d-flex gap-1 flex-wrap justify-content-center mt-2">
-                  <p className="small my-0" style={{ color: "#909090" }}>
-                    <HiOutlineMail className="fs-3 text-warning" />{" "}
+                <div className="d-flex gap-1 flex-column flex-wrap justify-content-center mt-2">
+                  <a
+                    className="small my-0"
+                    style={{ color: "#909090", textDecoration: "underline" }}
+                    href="mailto:omojolagbehomecareservices1902@gmail.com"
+                  >
+                    <HiOutlineMail
+                      className="fs-3 text-warning"
+                      style={{ marginRight: "3px" }}
+                    />
                     omojolagbehomecareservices1902@gmail.com
-                  </p>
-                  <p className="small my-0" style={{ color: "#909090" }}>
-                    <HiOutlineMailOpen className="fs-3 text-warning" />{" "}
+                  </a>
+                  <a
+                    href="mailto:omojolagbegeriatriccarefoundat@gmail.com"
+                    className="small my-0"
+                    style={{ color: "#909090", textDecoration: "underline" }}
+                  >
+                    <HiOutlineMailOpen
+                      className="fs-3 text-warning"
+                      style={{ marginRight: "3px" }}
+                    />{" "}
                     omojolagbegeriatriccarefoundat@gmail.com
-                  </p>
-                  <p className="small my-0" style={{ color: "#909090" }}>
-                    <MdPhoneInTalk className="fs-3 text-warning" />
-                    +2348057015681 / +2348147551902
-                  </p>
+                  </a>
+                  <a
+                    href="tel:+2348057015681"
+                    className="small my-0"
+                    style={{ color: "#909090", textDecoration: "underline" }}
+                  >
+                    <MdPhoneInTalk
+                      className="fs-3 text-warning"
+                      style={{ marginRight: "3px" }}
+                    />
+                    +2348057015681
+                  </a>
+                  <a
+                    href="tel:+2348147551902"
+                    className="small my-0"
+                    style={{ color: "#909090", textDecoration: "underline" }}
+                  >
+                    <MdPhoneInTalk
+                      className="fs-3 text-warning"
+                      style={{ marginRight: "3px" }}
+                    />
+                    +2348147551902
+                  </a>
+                  <a
+                    href="https://web.facebook.com/profile.php?id=100081814689135"
+                    className="small my-0"
+                    style={{ color: "#909090", textDecoration: "underline" }}
+                  >
+                    <FaFacebook
+                      className="fs-3 text-warning"
+                      style={{ marginRight: "3px" }}
+                    />
+                    Connect with us on Facebook
+                  </a>
                 </div>
               </div>
             </div>
