@@ -1,10 +1,20 @@
 import Breadcrump from "../components/common/Breadcrump";
 import PageLayout from "../components/common/PageLayout";
-import construction from "../assets/images/img/construction.jpg";
+import { useState } from "react";
+import { Gallery } from "react-grid-gallery";
+import { gallery_image, gallery_video } from "../utils/data";
+import ReactPlayer from "react-player";
+import { FaImages } from "react-icons/fa";
+import { BiSolidVideos } from "react-icons/bi";
 
-
-const Gallery = () => {
+const GalleryPage = () => {
   let pageTitle = "Gallery";
+  const [galleryType, setGalleryType] = useState("image");
+
+  const handleSelect = (index, item, event) => {
+    console.log({ index, item, event });
+  };
+
   return (
     <PageLayout pageTitle={pageTitle}>
       <Breadcrump page={pageTitle}>
@@ -13,15 +23,49 @@ const Gallery = () => {
         </h1>
       </Breadcrump>
       <section id="gallery__page">
-        <div className="container vh-100">
+        <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-lg-4">
-              <img
-                src={construction}
-                alt="construction"
-                className="img-fluid"
-              />
+              <div className="d-flex gap-1 justify-content-center">
+                <button
+                  onClick={() => setGalleryType("image")}
+                  className={
+                    galleryType === "image"
+                      ? "btn btn-sm btn-primary"
+                      : "btn btn-sm btn-outline-primary"
+                  }
+                >
+                  <FaImages /> Image
+                </button>
+                <button
+                  onClick={() => setGalleryType("video")}
+                  className={
+                    galleryType === "video"
+                      ? "btn btn-sm btn-primary"
+                      : "btn btn-sm btn-outline-primary"
+                  }
+                >
+                  <BiSolidVideos /> Video
+                </button>
+              </div>
             </div>
+          </div>
+          <div className="row mt-2 d-flex justify-content-center">
+            {galleryType === "image" ? (
+              <>
+                <div className="col-10">
+                  <Gallery onSelect={handleSelect} images={gallery_image} />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="col-10 d-flex gap-1 flex-wrap justify-content-between">
+                  {gallery_video.map((video) => (
+                    <ReactPlayer key={video} url={video} width="320" controls />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>
@@ -29,4 +73,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default GalleryPage;

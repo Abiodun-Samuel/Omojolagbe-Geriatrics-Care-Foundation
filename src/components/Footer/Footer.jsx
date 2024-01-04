@@ -30,7 +30,7 @@ const Footer = () => {
                 data-aos-delay="50"
                 className="col-lg-4 col-md-6 my-1"
               >
-                <div className="footer-links shadow rounded border border-warning">
+                <div className="footer-links shadow">
                   <h4>Useful Links</h4>
                   <Link to={"/"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> Home
