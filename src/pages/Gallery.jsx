@@ -53,15 +53,22 @@ const GalleryPage = () => {
           <div className="row mt-2 d-flex justify-content-center">
             {galleryType === "image" ? (
               <>
-                <div className="col-10">
+                <div data-aos="fade-up" className="col-10">
                   <Gallery onSelect={handleSelect} images={gallery_image} />
                 </div>
               </>
             ) : (
               <>
                 <div className="col-10 d-flex gap-1 flex-wrap justify-content-between">
-                  {gallery_video.map((video) => (
-                    <ReactPlayer key={video} url={video} width="320" controls />
+                  {gallery_video.map((video, index) => (
+                    <ReactPlayer
+                      data-aos="fade-up"
+                      data-aos-delay={index * 50}
+                      key={video}
+                      url={video}
+                      width="320"
+                      controls
+                    />
                   ))}
                 </div>
               </>
