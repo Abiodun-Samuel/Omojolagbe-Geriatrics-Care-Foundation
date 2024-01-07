@@ -44,9 +44,12 @@ const Footer = () => {
                   <Link to={"/contact"} className="d-block my-1 small">
                     <VscDebugBreakpointLogUnverified /> Contact
                   </Link>
-                  {/* <Link to={"/services"} className="d-block my-1 small">
-                    <VscDebugBreakpointLogUnverified /> Services
-                  </Link> */}
+                  <Link
+                    to={"/service/home-care-services"}
+                    className="d-block my-1 small"
+                  >
+                    <VscDebugBreakpointLogUnverified /> Home Care Services
+                  </Link>
                 </div>
               </div>
 

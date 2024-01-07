@@ -60,17 +60,17 @@ const Header = () => {
                   <GrServices style={{ marginRight: "5px" }} /> Services
                 </a>
                 <ul className="dropdown-menu">
-                  <li>
+                  {/* <li>
                     <Link
                       to={"/service/care-foundation"}
                       className="dropdown-item"
                     >
                       Omojolagbe Geriatric Care Foundation
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
-                      to={"/service/home-services"}
+                      to={"/service/home-care-services"}
                       className="dropdown-item"
                     >
                       Omojolagbe Home Care Services

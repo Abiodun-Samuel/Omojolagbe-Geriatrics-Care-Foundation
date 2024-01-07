@@ -31,8 +31,8 @@ const GalleryPage = () => {
                   onClick={() => setGalleryType("image")}
                   className={
                     galleryType === "image"
-                      ? "btn btn-sm btn-primary"
-                      : "btn btn-sm btn-outline-primary"
+                      ? "btn btn-sm btn-primary rounded-pill"
+                      : "btn btn-sm btn-outline-primary rounded-pill"
                   }
                 >
                   <FaImages /> Image
@@ -41,8 +41,8 @@ const GalleryPage = () => {
                   onClick={() => setGalleryType("video")}
                   className={
                     galleryType === "video"
-                      ? "btn btn-sm btn-primary"
-                      : "btn btn-sm btn-outline-primary"
+                      ? "btn btn-sm btn-primary rounded-pill"
+                      : "btn btn-sm btn-outline-primary rounded-pill"
                   }
                 >
                   <BiSolidVideos /> Video
