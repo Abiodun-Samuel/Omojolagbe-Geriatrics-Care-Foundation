@@ -21,16 +21,11 @@ const HomeServices = () => {
               </div>
             </div>
             <div className="col-lg-6 mb-2 d-flex align-items-center">
-              <div>
+              <div data-aos="fade-up" data-aos-delay="50">
                 <h4 className="fw-bolder text-dark">
                   Omojolagbe Geriatric Home Care Services
                 </h4>
-                <p
-                  style={{ lineHeight: 1.8 }}
-                  data-aos="fade-up"
-                  data-aos-delay="50"
-                  className="text-dark my-2"
-                >
+                <p style={{ lineHeight: 1.8 }} className="text-dark my-2">
                   Our Care home services play a pivotal role in ensuring the
                   well-being, safety, and quality of life of the elderly
                   population who may require additional support and care as they
