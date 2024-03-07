@@ -60,7 +60,7 @@ const ExpertGallary = () => {
       </Modal>
     <div className="mt-2 d-flex justify-content-center">
     <div data-aos="fade-up" className="col-10">
-    <h3 className="mb-2">Elderly Health Consultation Day</h3>
+    <h5 className="mb-2">Elderly Health Consultation Day</h5>
     <Gallery onClick={handleSelect} images={gallery_ExpertImage} />
     </div>
     </div>
