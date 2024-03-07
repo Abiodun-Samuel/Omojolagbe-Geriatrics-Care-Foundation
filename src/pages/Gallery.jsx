@@ -11,7 +11,7 @@ import { FaImages } from "react-icons/fa";
 import { BiSolidVideos } from "react-icons/bi";
 import { MdOutlineArrowLeft } from "react-icons/md";
 import { MdOutlineArrowRight } from "react-icons/md";
-import ExpertGallary from "./services/ExpertGallary";
+import ExpertGallary from "./ExpertGallary";
 
 
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from 'react-modal';
 import { ImCancelCircle } from "react-icons/im";
 import { Gallery } from "react-grid-gallery";
-import { gallery_ExpertImage } from "../../utils/data";
+import { gallery_ExpertImage } from "../utils/data";
 import { MdOutlineArrowLeft } from "react-icons/md";
 import { MdOutlineArrowRight } from "react-icons/md";
 
