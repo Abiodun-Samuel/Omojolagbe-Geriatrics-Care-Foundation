@@ -47,7 +47,7 @@ import video6 from "../assets/images/videos/video6.mp4";
 export const gallery_ExpertImage =[
   {
       src: image27,
-      width: 450,
+      width: 700,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -56,7 +56,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image28,
-      width: 450,
+      width:600,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -65,7 +65,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image29,
-      width: 450,
+      width: 300,
       height: 450,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -74,7 +74,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image30,
-      width: 450,
+      width: 600,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -83,7 +83,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image31,
-      width: 450,
+      width: 600,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -93,7 +93,7 @@ export const gallery_ExpertImage =[
   
     {
       src: image32,
-      width: 450,
+      width: 600,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -102,7 +102,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image33,
-      width: 450,
+      width: 700,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -111,7 +111,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image34,
-      width: 450,
+      width: 700,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -120,7 +120,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image35,
-      width: 450,
+      width: 700,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -129,7 +129,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image36,
-      width: 450,
+      width: 700,
       height: 600,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -139,7 +139,7 @@ export const gallery_ExpertImage =[
   
     {
       src: image37,
-      width: 450,
+      width: 600,
       height: 450,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
@@ -148,7 +148,7 @@ export const gallery_ExpertImage =[
     },
     {
       src: image38,
-      width: 450,
+      width: 300,
       height: 450,
       isSelected: false,
       caption: "Omojolagbe Geriatric Care Foundation Gallery",
