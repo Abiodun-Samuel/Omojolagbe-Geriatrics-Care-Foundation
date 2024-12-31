@@ -50,8 +50,8 @@ const AboutComponent = () => {
         </div>
       </div>
 
-      <div className="about__obj py-5">
-        <div className="container py-5">
+      <div className="about__obj mt-5">
+        <div className="container py-2">
           <div className="row d-flex justify-content-center py-2">
             <div className="col-lg-4 col-md-6 d-flex flex-column">
               <div

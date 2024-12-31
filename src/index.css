@@ -111,7 +111,7 @@ section#contact__section {
   background: url("./assets/images/bg/about-bg.jpg");
   background-position: center;
   background-size: cover;
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+  /* clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%); */
 }
 
 /* contact section   */
@@ -120,7 +120,7 @@ section#contact__section {
     url("./assets/images/bg/contact-bg.jpg");
   background-position: center;
   background-size: cover;
-  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+  /* clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%); */
 }
 
 /* footer section  */
