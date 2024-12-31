@@ -24,6 +24,19 @@ import image23 from "../assets/images/gallery/gallery23.jpg";
 import image24 from "../assets/images/gallery/gallery24.jpg";
 import image25 from "../assets/images/gallery/gallery25.jpg";
 import image26 from "../assets/images/gallery/gallery26.jpg";
+import image27 from "../assets/images/expert/expert.jpeg";
+import image28 from "../assets/images/expert/expert1.jpeg";
+import image29 from "../assets/images/expert/expert2.jpeg";
+import image30 from "../assets/images/expert/expert3.jpeg";
+import image31 from "../assets/images/expert/expert4.jpeg";
+import image32 from "../assets/images/expert/expert5.jpeg";
+import image33 from "../assets/images/expert/expert6.jpeg";
+import image34 from "../assets/images/expert/expert7.jpeg";
+import image35 from "../assets/images/expert/expert8.jpeg";
+import image36 from "../assets/images/expert/expert9.jpeg";
+import image37 from "../assets/images/expert/expert10.jpeg";
+import image38 from "../assets/images/expert/expert11.jpeg";
+import image39 from "../assets/images/expert/expert12.jpeg";
 import video1 from "../assets/images/videos/video1.mp4";
 import video2 from "../assets/images/videos/video2.mp4";
 import video3 from "../assets/images/videos/video3.mp4";
@@ -31,6 +44,128 @@ import video4 from "../assets/images/videos/video4.mp4";
 import video5 from "../assets/images/videos/video5.mp4";
 import video6 from "../assets/images/videos/video6.mp4";
 
+export const gallery_ExpertImage =[
+  {
+      src: image27,
+      width: 700,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "1", title: "1" }],
+    },
+    {
+      src: image28,
+      width:600,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "2", title: "2" }],
+    },
+    {
+      src: image29,
+      width: 300,
+      height: 450,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "3", title: "3" }],
+    },
+    {
+      src: image30,
+      width: 600,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "4", title: "4" }],
+    },
+    {
+      src: image31,
+      width: 600,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "5", title: "5" }],
+    },
+  
+    {
+      src: image32,
+      width: 600,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "6", title: "6" }],
+    },
+    {
+      src: image33,
+      width: 700,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "7", title: "7" }],
+    },
+    {
+      src: image34,
+      width: 700,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "8", title: "8" }],
+    },
+    {
+      src: image35,
+      width: 700,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "9", title: "9" }],
+    },
+    {
+      src: image36,
+      width: 700,
+      height: 600,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "10", title: "10" }],
+    },
+  
+    {
+      src: image37,
+      width: 600,
+      height: 450,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "11", title: "11" }],
+    },
+    {
+      src: image38,
+      width: 300,
+      height: 450,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "12", title: "12" }],
+    },
+    {
+      src: image39,
+      width: 450,
+      height: 450,
+      isSelected: false,
+      caption: "Omojolagbe Geriatric Care Foundation Gallery",
+      alt: "Omojolagbe Geriatric Care Foundation Gallery",
+      tags: [{ value: "13", title: "13" }],
+    },
+  
+]
 export const gallery_image = [
   {
     src: image1,
@@ -39,7 +174,7 @@ export const gallery_image = [
     isSelected: false,
     caption: "Omojolagbe Geriatric Care Foundation Gallery",
     alt: "Omojolagbe Geriatric Care Foundation Gallery",
-    tags: [{ value: "1", title: "1" }],
+    tags: [{ value: "1", title: "13" }],
   },
   {
     src: image2,
