@@ -11,11 +11,7 @@ const ServiceSection = () => {
             data-aos="fade-up"
             className="col-lg-6 mb-3  d-flex align-items-center"
           >
-            <img
-              src={imageOne}
-              alt="service image"
-              className="img-thumbnail rounded shadow"
-            />
+            <img src={imageOne} alt="service image" className="img-fluid" />
             <img
               style={{
                 transform: "scaleX(-1)",
@@ -67,11 +63,11 @@ const ServiceSection = () => {
                 </h2>
               </SectionHeader>
               <p className="my-2 text-dark text-center">
-                At Omojolagbe  Care Foundation, we`re dedicated to
-                providing more than just care; were committed to enhancing
-                qualify of lives. Our trained caregivers engage seniors in
-                meaningful activities, conversations, and outings to foster
-                emotional well-being and social interactions.
+                At Omojolagbe Care Foundation, we`re dedicated to providing more
+                than just care; were committed to enhancing qualify of lives.
+                Our trained caregivers engage seniors in meaningful activities,
+                conversations, and outings to foster emotional well-being and
+                social interactions.
               </p>
               <p className="my-2 text-dark text-center">
                 Life is meant to be lived fully at every age. Our center is a
@@ -92,11 +88,7 @@ const ServiceSection = () => {
               alt="service image"
               height={150}
             />
-            <img
-              src={imageTwo}
-              alt="service image"
-              className="img-thumbnail rounded shadow"
-            />
+            <img src={imageTwo} alt="service image" className="img-fluid" />
           </div>
         </div>
       </div>
