@@ -32,38 +32,38 @@ const ExpertGallary = () => {
 
   return (
     <>
-    <Modal
+      <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Image Modal"
         className="imgSlider"
       >
-      <div className="imgContainer">
-      <div className="slider">
-      <div className="prev-button">
-      <MdOutlineArrowLeft style={{cursor:'pointer'}}   onClick={prevImage}/>
-      </div>
-      <div className="" style={{ display:"flex",gap:"10px", flexDirection:'column', justifyItems:"center", alignItems:"center"}}>
-      <ImCancelCircle onClick={closeModal} className="CancelBtn"  />
-        <img
-         className="imgPIc"
-          src={gallery_ExpertImage[selectedImageIndex].src}
-          alt={gallery_ExpertImage[selectedImageIndex].caption}
-          style={{ maxWidth: "100%", maxHeight: "100%" }}
-        />
+        <div className="imgContainer">
+          <div className="slider">
+            <div className="prev-button">
+              <MdOutlineArrowLeft style={{ cursor: 'pointer' }} onClick={prevImage} />
+            </div>
+            <div className="" style={{ display: "flex", gap: "10px", flexDirection: 'column', justifyItems: "center", alignItems: "center" }}>
+              <ImCancelCircle onClick={closeModal} className="CancelBtn" />
+              <img
+                className="imgPIc"
+                src={gallery_ExpertImage[selectedImageIndex].src}
+                alt={gallery_ExpertImage[selectedImageIndex].caption}
+                style={{ maxWidth: "100%", maxHeight: "100%" }}
+              />
+            </div>
+            <div className="prev-button">
+              <MdOutlineArrowRight style={{ cursor: 'pointer' }} onClick={nextImage} />
+            </div>
+          </div>
         </div>
-        <div className="prev-button">
-      <MdOutlineArrowRight style={{cursor:'pointer'}}   onClick={nextImage}/>
-      </div>
-      </div>
-      </div>
       </Modal>
-    <div className="mt-2 d-flex justify-content-center">
-    <div data-aos="fade-up" className="col-10">
-    <h5 className="mb-2">Elderly Health Consultation Day</h5>
-    <Gallery onClick={handleSelect} images={gallery_ExpertImage} />
-    </div>
-    </div>
+      <div className="mt-2 d-flex justify-content-center">
+        <div data-aos="fade-up" className="col-10">
+          <h5 className="mb-2">Elderly Health Consultation Day</h5>
+          <Gallery onClick={handleSelect} images={gallery_ExpertImage} />
+        </div>
+      </div>
     </>
   )
 }
