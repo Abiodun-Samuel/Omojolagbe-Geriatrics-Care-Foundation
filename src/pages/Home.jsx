@@ -24,13 +24,17 @@ const HomePage = () => {
       </PageLayout>
       <BootstrapModal title='Training'>
         <div className="row justify-content-center align-items-center ">
-          <div className="col-lg-6">
+          <div className="col-lg-6 text-center">
             <Link to={'/training'}>
               <img
                 src={training}
                 alt="Caregiver Training Flyer"
                 className="img-fluid w-100"
               />
+            </Link>
+
+            <Link to='/training' className="my-2 btn btn-outline-primary rounded-pill">
+              Read More
             </Link>
           </div>
         </div>
