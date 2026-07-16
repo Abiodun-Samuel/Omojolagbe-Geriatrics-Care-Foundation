@@ -1,0 +1,6 @@
+dist
+node_modules
+src/assets
+public/favicon
+docs
+package-lock.json

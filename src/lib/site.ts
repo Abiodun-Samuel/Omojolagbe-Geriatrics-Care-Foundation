@@ -1,0 +1,48 @@
+/**
+ * Single source of truth for site-wide constants: contact details, the two
+ * WhatsApp/phone/email touchpoints from the original build, and SEO defaults.
+ * All original contact strings are preserved verbatim (docs/CONTENT_INVENTORY.md).
+ */
+
+export const site = {
+  name: "Omojolagbe Geriatric Care",
+  legalName: "Omojolagbe Geriatric Care Foundation",
+  serviceName: "Omojolagbe Home Care Services",
+  tagline: "Supporting the independent of the elderly",
+  founded: 2018,
+  cacCert: "191574",
+  url: "https://omojolagbecare.org",
+  ogImage: "/og/omojolagbe-og.png",
+
+  // Verbatim from the original site.
+  emails: {
+    homeCare: "omojolagbehomecareservices1902@gmail.com",
+    foundation: "omojolagbegeriatriccarefoundat@gmail.com",
+  },
+  phones: ["+2348057015681", "+2348147551902"],
+  whatsappNumber: "2348057015681",
+  address: {
+    street: "No 15, Akin Alabi Street Welder B/S, Alakia-Isebo Road",
+    city: "Ibadan",
+    state: "Oyo",
+    country: "Nigeria",
+    full: "No 15, Akin Alabi Street Welder B/S, Alakia-Isebo Road, Ibadan, Oyo state Nigeria.",
+    geo: { lat: 7.3775, lng: 3.947 }, // Ibadan approx (map centering only)
+  },
+  hours: "Monday to Saturday, 8:00am to 6:00pm. Care lines answered 24/7.",
+  social: {
+    facebook: "https://web.facebook.com/profile.php?id=100081814689135",
+  },
+  credit: {
+    label: "Abiodun Digital Hub",
+    url: "https://abiodunsamuel.com",
+  },
+} as const;
+
+/** Build a wa.me link with a prefilled message. */
+export function whatsappLink(message: string): string {
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+export const defaultWhatsappMessage =
+  "Hello Omojolagbe Care, I would like to ask about home care for my family.";

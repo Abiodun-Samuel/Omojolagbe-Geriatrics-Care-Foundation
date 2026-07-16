@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+/* Self-hosted variable fonts (Phase 3, Phase 6). */
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/figtree";
+
+/* ------------------------------------------------------------------ *
+ * @theme  — all design tokens as CSS custom properties.
+ * Derived and contrast-validated in docs/DESIGN_SYSTEM.md.
+ * Yellow is fill-and-graphic only. It has no light-surface text token.
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Brand yellow ramp (lemon yellow) */
+  --color-brand-50: #fffdf0;
+  --color-brand-100: #fffac9;
+  --color-brand-200: #fff59e;
+  --color-brand-300: #fff975;
+  --color-brand-400: #fff400; /* canonical brand yellow: CTA fill, spine */
+  --color-brand-500: #ffd400; /* pressed / denser graphic */
+  --color-brand-600: #e0b000;
+  --color-brand-700: #a98400;
+  --color-brand-800: #8a6d00; /* only yellow usable as text on white (4.92:1) */
+  --color-brand-900: #5e4a00;
+  --color-brand-950: #3a2e00;
+
+  /* Ink ramp (warm near-black) */
+  --color-ink-200: #e7e2d9;
+  --color-ink-300: #cfc9c0;
+  --color-ink-400: #a8a199;
+  --color-ink-500: #78716a; /* muted (AA at >=16px) */
+  --color-ink-600: #6b6459; /* secondary text */
+  --color-ink-700: #4a453c; /* body text */
+  --color-ink-800: #2a251e;
+  --color-ink-900: #1a1712; /* canonical ink */
+  --color-ink-950: #141210;
+
+  /* Warm neutral surfaces */
+  --color-paper: #faf7f0;
+  --color-paper-raised: #ffffff;
+  --color-paper-sunken: #f2ece1;
+
+  /* Verification accent (evergreen) — trust/success only */
+  --color-verify-50: #eaf3ef;
+  --color-verify-500: #1f5e4a;
+  --color-verify-600: #164a3a;
+
+  /* Feedback */
+  --color-danger: #b4231c;
+  --color-focus: #8a6d00;
+
+  /* Typography */
+  --font-display: "Fraunces Variable", ui-serif, Georgia, serif;
+  --font-sans: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --text-eyebrow: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-body: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --text-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --text-h3: clamp(1.35rem, 1.15rem + 0.9vw, 1.85rem);
+  --text-h2: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+  --text-h1: clamp(2.25rem, 1.5rem + 3.4vw, 4rem);
+  --text-hero: clamp(2.75rem, 1.6rem + 5.6vw, 6rem);
+
+  /* Measure */
+  --measure-prose: 68ch;
+  --measure-lead: 42ch;
+
+  /* Containers */
+  --container-prose: 720px;
+  --container-content: 1120px;
+  --container-wide: 1320px;
+
+  /* Radius */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-card: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Elevation (warm-tinted) */
+  --shadow-card: 0 1px 2px rgba(26, 23, 18, 0.04),
+    0 8px 24px -12px rgba(26, 23, 18, 0.12);
+  --shadow-pop: 0 2px 4px rgba(26, 23, 18, 0.06),
+    0 24px 48px -20px rgba(26, 23, 18, 0.2);
+
+  /* Motion */
+  --dur-fast: 140ms;
+  --dur-base: 320ms;
+  --dur-slow: 560ms;
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ------------------------------------------------------------------ *
+ * Base layer
+ * ------------------------------------------------------------------ */
+@layer base {
+  * {
+    border-color: var(--color-ink-200);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink-700);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink-900);
+    font-weight: 560;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, designed focus states (Phase 8). */
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  ::selection {
+    background: var(--color-brand-300);
+    color: var(--color-ink-900);
+  }
+
+  /* Tabular figures for numeric contexts. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Documented primitive set (the only permitted @apply usage).
+ * See docs/HANDOVER.md.
+ * ------------------------------------------------------------------ */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)]
+      px-6 py-3 text-[0.95rem] font-semibold no-underline
+      transition-[transform,background-color,box-shadow] duration-[var(--dur-fast)]
+      ease-[var(--ease-brand)];
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn-primary {
+    background-color: var(--color-brand-400);
+    color: var(--color-ink-900);
+    box-shadow: var(--shadow-card);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-brand-500);
+    box-shadow: var(--shadow-pop);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-ink-900);
+    box-shadow: inset 0 0 0 1px var(--color-ink-300);
+  }
+  .btn-ghost:hover {
+    box-shadow: inset 0 0 0 1px var(--color-ink-900);
+  }
+
+  .btn-on-dark {
+    background-color: transparent;
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  }
+  .btn-on-dark:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-[var(--radius-pill)]
+      px-3 py-1 text-sm font-medium;
+    background-color: var(--color-paper-sunken);
+    color: var(--color-ink-700);
+  }
+
+  .card {
+    background-color: var(--color-paper-raised);
+    border: 1px solid var(--color-ink-200);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .field {
+    @apply w-full rounded-[var(--radius-sm)] px-4 py-3 text-[1rem];
+    background-color: var(--color-paper-raised);
+    border: 1px solid var(--color-ink-300);
+    color: var(--color-ink-900);
+    transition: border-color var(--dur-fast) var(--ease-inout);
+  }
+  .field::placeholder {
+    color: var(--color-ink-500);
+  }
+  .field:focus {
+    border-color: var(--color-ink-900);
+    outline: 2px solid var(--color-focus);
+    outline-offset: 1px;
+  }
+  .field[aria-invalid="true"] {
+    border-color: var(--color-danger);
+  }
+
+  .eyebrow {
+    font-size: var(--text-eyebrow);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-ink-600);
+  }
+
+  .tag-verify {
+    @apply inline-flex items-center gap-1.5 rounded-[var(--radius-pill)]
+      px-2.5 py-1 text-sm font-medium;
+    background-color: var(--color-verify-50);
+    color: var(--color-verify-600);
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Custom utilities & variants
+ * ------------------------------------------------------------------ */
+@utility measure {
+  max-width: var(--measure-prose);
+}
+@utility measure-lead {
+  max-width: var(--measure-lead);
+}
+
+/* Reduced motion: collapse everything to a short fade (Phase 7). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 120ms !important;
+    scroll-behavior: auto !important;
+  }
+}
