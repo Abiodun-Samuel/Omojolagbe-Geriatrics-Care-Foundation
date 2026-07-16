@@ -11,8 +11,14 @@ Logo samples give `#FFF975`; CSS carried `#FFFF03`/`#FAFA2E`. Canonical brand ye
 ## D3 — Yellow is fill-only, never body text
 Contrast math is decisive (`1.10:1` on white). Yellow is used only as a fill under dark text, or as a large graphic/rule on dark. Enforced by not defining a light-surface text token in the yellow ramp.
 
-## D4 — Foundation vs commercial identity (interim)
-Pending client answer (GAP Q1), the build treats the entity as **one brand with two arms**: paid home-care services (booking, pricing, the marketing funnel the brief wants) as the primary conversion path, and the foundation/community work (needs, donations, training outreach) as a first-class but secondary narrative. This lets Phase 3+ proceed without stalling and is cheap to re-weight once the client answers.
+## D4 — Foundation vs commercial identity (CONFIRMED by client)
+The entity is **one brand with two arms**: paid home-care services (booking, pricing, the marketing funnel the brief wants) as the **primary** conversion path, and the foundation/community work (needs, donations, training outreach) as a first-class but **secondary** narrative. Client chose "Two arms, services-led" on 2026-07-16.
+
+## D4b — Coverage claims (CONFIRMED by client)
+Ibadan is the served city (only one the existing copy supports). Lagos, Abuja, Port Harcourt are presented as **"expanding to" / available for diaspora-arranged care**, never as fully-served. No false coverage claims.
+
+## D4c — Pricing (CONFIRMED by client)
+`/pricing` and home pricing indication show **indicative Naira ranges/tiers clearly labelled as sample figures** in the `content/` layer, with honest "final cost after free assessment" framing. Client swaps real numbers in one file.
 
 ## D5 — Router choice
 react-router v7 declarative with nested layouts and scroll restoration. TanStack Router not chosen: the site is content/marketing with simple typed params (`:slug`); v7's data-agnostic declarative mode plus a small typed route helper covers it without the extra concept weight.
