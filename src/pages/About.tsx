@@ -1,4 +1,8 @@
-import { Target, Eye, Dot, HeartHandshake } from "lucide-react";
+import { Target, Eye, Dot } from "lucide-react";
+import donorIcon from "@/assets/images/icons/donor.svg";
+import wheelchairIcon from "@/assets/images/icons/wheelchair.svg";
+import ambulanceIcon from "@/assets/images/icons/ambulance.svg";
+import buildingIcon from "@/assets/images/icons/hospital.svg";
 import { Seo } from "@/components/Seo";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
@@ -20,11 +24,12 @@ import {
 import { breadcrumbLd } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 
-const needIcons: Record<string, string> = {
-  donor: "Donors",
-  wheelchair: "Mobility equipment",
-  ambulance: "An ambulance",
-  building: "Land and building",
+/** The original needs icons, preserved from the old build. */
+const needIconSrc: Record<string, string> = {
+  donor: donorIcon,
+  wheelchair: wheelchairIcon,
+  ambulance: ambulanceIcon,
+  building: buildingIcon,
 };
 
 export function Component() {
@@ -150,19 +155,17 @@ export function Component() {
           {needs.map((need) => (
             <RevealItem key={need.label}>
               <div className="card flex h-full flex-col items-center p-6 text-center">
-                <span
-                  className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-100"
-                  aria-hidden="true"
-                >
-                  <HeartHandshake
-                    size={24}
-                    className="text-ink-900"
-                  />
-                </span>
-                <p className="mt-4 font-semibold text-ink-900">
-                  {need.label}
-                </p>
-                <p className="sr-only">{needIcons[need.icon]}</p>
+                {/* AB17-AB20 alt texts preserved verbatim. */}
+                <img
+                  src={needIconSrc[need.icon]}
+                  alt={need.alt}
+                  width={72}
+                  height={72}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-18 w-18 rounded-full border border-ink-200 bg-brand-50 p-3"
+                />
+                <p className="mt-4 font-semibold text-ink-900">{need.label}</p>
               </div>
             </RevealItem>
           ))}

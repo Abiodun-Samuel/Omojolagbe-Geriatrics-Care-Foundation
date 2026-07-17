@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "tsx scripts/generate-seo.ts && tsx scripts/generate-og.ts && tsx scripts/check-images.ts",
+    "prebuild": "tsx scripts/generate-seo.ts && tsx scripts/generate-og.ts && tsx scripts/check-images.ts && tsx scripts/check-copy.ts",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "seo": "tsx scripts/generate-seo.ts",
     "check:images": "tsx scripts/check-images.ts",
+    "check:copy": "tsx scripts/check-copy.ts",
     "check": "npm run typecheck && npm run lint && npm run build"
   },
   "dependencies": {

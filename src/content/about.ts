@@ -1,9 +1,21 @@
 /** About-page content. Every original string preserved verbatim
  *  (docs/CONTENT_INVENTORY.md IDs noted). */
 
-// A02 (home) / AB02 (about, fuller with CAC no.) / FT01 (footer) all preserved.
+// AB02 (about page): the fullest variant, with the CAC certificate number.
 export const foundingParagraph =
   "Omojolagbe Geriatric Care Foundation was established in 2018 in Ibadan, Oyo State Nigeria with CAC Cert. No: 191574. It is a reputable organization working in the way of creating healthier, happier and fruitful life for the aged. We have impacted the lives of over 1000 elderly people in Ibadan and Nigeria in general.";
+
+// A02 (home): the CAC-worded variant, used in the home About section.
+export const foundingParagraphHome =
+  "Omojolagbe Geriatric Care Foundation was established in 2018 in Ibadan, Oyo State Nigeria and fully registered by The Corporate Affairs Commission. It is a reputable organization working in the way of creating healthier, happier and fruitful life for the aged. We have impacted the lives of over 1000 elderly people in Ibadan and Nigeria in general.";
+
+// M02: the original meta description.
+export const legacyMetaDescription =
+  "Omojolagbe Geriatric Care Foundation is a reputable organization working in the way of creating healthier, happier and fruitful life for the aged. We have impacted the lives of over 1000 elderly people in Ibadan and Nigeria in general";
+
+// M03: the original meta keywords.
+export const legacyMetaKeywords =
+  "Assisted living Memory care Home care Geriatric Care";
 
 // A04-A07: home "We" phrasing of the objectives, preserved.
 export const objectivesWeVoice = [
@@ -35,15 +47,17 @@ export const vision = {
   body: "A society free of sickness, disease and untimely death among the elderly people.",
 };
 
-// AB12-AB16 preserved (the foundation arm).
+// AB12-AB16 preserved (the foundation arm). AB17-AB20 alt texts preserved
+// as each item's `alt`.
 export const needs = [
-  { label: "Donors.", icon: "donor" },
+  { label: "Donors.", icon: "donor", alt: "donor" },
   {
     label: "Wheel chairs, crutches, and walkers for disabled old people.",
     icon: "wheelchair",
+    alt: "wheelchair",
   },
-  { label: "An ambulance.", icon: "ambulance" },
-  { label: "Land and Building.", icon: "building" },
+  { label: "An ambulance.", icon: "ambulance", alt: "ambulance" },
+  { label: "Land and Building.", icon: "building", alt: "land and building" },
 ] as const;
 
 /** Personal care / quality of life narrative from the original home Services

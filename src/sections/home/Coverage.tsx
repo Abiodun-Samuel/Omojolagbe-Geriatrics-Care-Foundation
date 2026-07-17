@@ -2,6 +2,8 @@ import { Link } from "react-router";
 import { MapPin, Globe2, ArrowRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Reveal } from "@/components/ui/Reveal";
+import { contactNarrative } from "@/content/about";
 
 const cities = [
   { name: "Ibadan", status: "Serving now" },
@@ -16,8 +18,18 @@ export function Coverage() {
       <SectionHeading
         eyebrow="Where we care"
         title="Rooted in Ibadan, reaching further"
-        intro="We provide care in Ibadan today and are expanding across Nigeria. Wherever your parent is, we can talk about how to help."
+        intro={contactNarrative}
       />
+
+      {/* C08 preserved verbatim. */}
+      <Reveal className="mt-6">
+        <Link
+          to="/contact"
+          className="font-semibold text-brand-800 hover:underline"
+        >
+          Contact Us Now &#8594;
+        </Link>
+      </Reveal>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <ul className="grid gap-4 sm:grid-cols-2">

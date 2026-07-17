@@ -180,7 +180,14 @@ export function Component() {
                 </p>
               </div>
             </div>
-            <p className="mt-4 text-sm text-ink-500">
+            {/* T02 preserved verbatim. */}
+            <Link
+              to="/careers"
+              className="mt-4 inline-block font-semibold text-brand-800 hover:underline"
+            >
+              Read More
+            </Link>
+            <p className="mt-3 text-sm text-ink-500">
               Training runs in cohorts. Contact us for the next dates.
             </p>
           </Reveal>

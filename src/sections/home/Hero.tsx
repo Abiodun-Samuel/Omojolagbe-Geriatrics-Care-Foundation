@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { WhatsAppButton } from "@/components/WhatsApp";
 import { media } from "@/content/media";
+import { heroLegacyLine } from "@/content/about";
 import { easeBrand } from "@/lib/motion";
 
 /**
@@ -61,6 +62,20 @@ export function Hero() {
               with a report after every visit.
             </motion.p>
 
+            {/* H02 preserved verbatim, with its three highlighted words. The
+                brand yellow cannot be text on paper (1.10:1), so emphasis is
+                a yellow underline on ink rather than yellow type. */}
+            <motion.p variants={item} className="mt-4 font-display text-[1.15rem] text-ink-800">
+              We create{" "}
+              {heroLegacyLine.words.map((word, i) => (
+                <span key={word}>
+                  <em className="marker-brand">{word}</em>
+                  {i === 0 ? ", " : i === 1 ? " and " : " "}
+                </span>
+              ))}
+              life for the elderly.
+            </motion.p>
+
             <motion.div
               variants={item}
               className="mt-8 flex flex-wrap items-center gap-3"
@@ -71,6 +86,22 @@ export function Hero() {
               </Link>
               <WhatsAppButton message="Hello Omojolagbe Care, I would like to arrange home care for my parent." />
             </motion.div>
+
+            {/* H03 and H04 preserved verbatim as the secondary paths. */}
+            <motion.p variants={item} className="mt-5 flex flex-wrap gap-x-5 text-sm">
+              <Link
+                to="/about"
+                className="font-semibold text-brand-800 hover:underline"
+              >
+                Learn More &#8594;
+              </Link>
+              <Link
+                to="/contact"
+                className="font-semibold text-brand-800 hover:underline"
+              >
+                Contact
+              </Link>
+            </motion.p>
           </motion.div>
 
           <motion.div

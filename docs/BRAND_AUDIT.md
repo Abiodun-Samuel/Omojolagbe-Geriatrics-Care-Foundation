@@ -70,7 +70,7 @@ The old CSS carried a green family (`#245140`, `#5A947C`, `#629584`) that never 
 - `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`
 - `apple-touch-icon.png`
 - `android-chrome-192x192.png`, `android-chrome-512x512.png` (512 is a real 512x512 PNG)
-- `site.webmanifest` — currently has **empty** `name` and `short_name`, `theme_color`/`background_color` both `#ffffff`, and icon `src` paths missing the `/favicon/` prefix (bug). To be rewritten with real name, brand ink theme colour, and correct paths.
+- `site.webmanifest`: currently has **empty** `name` and `short_name`, `theme_color`/`background_color` both `#ffffff`, and icon `src` paths missing the `/favicon/` prefix (bug). To be rewritten with real name, brand ink theme colour, and correct paths.
 
 ## Fonts currently loaded
 - **Poppins** (Google Fonts, weights 100-900, `display=swap`), forced globally via `body { font-family: "Poppins" !important }`.

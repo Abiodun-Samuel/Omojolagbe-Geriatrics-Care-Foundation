@@ -1,6 +1,7 @@
 import { Seo } from "@/components/Seo";
 import { Hero } from "@/sections/home/Hero";
 import { TrustStrip } from "@/sections/home/TrustStrip";
+import { AboutFoundation } from "@/sections/home/AboutFoundation";
 import { ServicesOverview } from "@/sections/home/ServicesOverview";
 import { WhoWeCareFor } from "@/sections/home/WhoWeCareFor";
 import { HowItWorks } from "@/sections/home/HowItWorks";
@@ -14,18 +15,22 @@ import { FaqPreview } from "@/sections/home/FaqPreview";
 import { CtaBand } from "@/sections/CtaBand";
 import { medicalBusinessLd, faqLd } from "@/lib/jsonld";
 import { faqItems } from "@/content/faq";
+import { legacyMetaDescription, legacyMetaKeywords } from "@/content/about";
 
 export default function Home() {
   return (
     <>
+      {/* M02 preserved verbatim as the home meta description; M03 as keywords. */}
       <Seo
-        title="Home Care and Elderly Support in Nigeria | Omojolagbe Geriatric Care"
-        description="Compassionate home care for elderly Nigerians. Vetted caregivers and NMCN-licensed nurses in Ibadan, arranged from home or abroad. Book a free care assessment."
+        title="Home | Omojolagbe Geriatric Care Foundation"
+        description={legacyMetaDescription}
+        keywords={legacyMetaKeywords}
         path="/"
         jsonLd={[medicalBusinessLd(), faqLd(faqItems.slice(0, 6))]}
       />
       <Hero />
       <TrustStrip />
+      <AboutFoundation />
       <ServicesOverview />
       <WhoWeCareFor />
       <HowItWorks />

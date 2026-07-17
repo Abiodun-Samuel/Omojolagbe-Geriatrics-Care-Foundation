@@ -57,6 +57,17 @@ export const primaryNav: NavItem[] = [
 
 export const footerNav: { heading: string; links: NavChild[] }[] = [
   {
+    // FT02 "Useful Links" preserved from the original footer.
+    heading: "Useful Links",
+    links: [
+      { label: "Home", to: "/" },
+      { label: "About", to: "/about" },
+      { label: "Gallery", to: "/gallery" },
+      { label: "Contact", to: "/contact" },
+      { label: "Home Care Services", to: "/services" },
+    ],
+  },
+  {
     heading: "Care",
     links: [
       { label: "Home Care Services", to: "/services" },
@@ -67,20 +78,12 @@ export const footerNav: { heading: string; links: NavChild[] }[] = [
     ],
   },
   {
-    heading: "Company",
-    links: [
-      { label: "About", to: "/about" },
-      { label: "Diaspora families", to: "/diaspora" },
-      { label: "Careers", to: "/careers" },
-      { label: "Journal", to: "/journal" },
-      { label: "Gallery", to: "/gallery" },
-    ],
-  },
-  {
     heading: "Support",
     links: [
       { label: "Book an assessment", to: "/book-assessment" },
-      { label: "Contact", to: "/contact" },
+      { label: "Diaspora families", to: "/diaspora" },
+      { label: "Careers", to: "/careers" },
+      { label: "Journal", to: "/journal" },
       { label: "Testimonials", to: "/testimonials" },
       { label: "FAQ", to: "/faq" },
     ],

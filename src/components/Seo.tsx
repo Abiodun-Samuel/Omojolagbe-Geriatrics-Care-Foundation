@@ -10,6 +10,8 @@ type SeoProps = {
   /** Optional JSON-LD objects to inject for this route. */
   jsonLd?: Array<Record<string, unknown>>;
   noIndex?: boolean;
+  /** Legacy meta keywords, preserved from the original build where present. */
+  keywords?: string;
 };
 
 /**
@@ -23,6 +25,7 @@ export function Seo({
   image,
   jsonLd,
   noIndex,
+  keywords,
 }: SeoProps) {
   const canonical = `${site.url}${path === "/" ? "" : path}`;
   const ogImage = image
@@ -35,6 +38,7 @@ export function Seo({
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical} />
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 

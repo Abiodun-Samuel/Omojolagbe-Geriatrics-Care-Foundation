@@ -5,7 +5,7 @@
 @import "@fontsource-variable/figtree";
 
 /* ------------------------------------------------------------------ *
- * @theme  — all design tokens as CSS custom properties.
+ * @theme: all design tokens as CSS custom properties.
  * Derived and contrast-validated in docs/DESIGN_SYSTEM.md.
  * Yellow is fill-and-graphic only. It has no light-surface text token.
  * ------------------------------------------------------------------ */
@@ -39,7 +39,7 @@
   --color-paper-raised: #ffffff;
   --color-paper-sunken: #f2ece1;
 
-  /* Verification accent (evergreen) — trust/success only */
+  /* Verification accent (evergreen): trust/success only */
   --color-verify-50: #eaf3ef;
   --color-verify-500: #1f5e4a;
   --color-verify-600: #164a3a;
@@ -251,6 +251,14 @@
 }
 @utility measure-lead {
   max-width: var(--measure-lead);
+}
+
+/* Marker highlight: the sanctioned way to emphasise a word with brand yellow
+ * on a light surface. Yellow can never be the text colour (1.10:1 on white),
+ * so it sits behind the ink like a highlighter pen. */
+@utility marker-brand {
+  font-style: normal;
+  box-shadow: inset 0 -0.42em 0 var(--color-brand-300);
 }
 
 /* Named type roles. `text-*` in Tailwind covers both font-size and color, so
