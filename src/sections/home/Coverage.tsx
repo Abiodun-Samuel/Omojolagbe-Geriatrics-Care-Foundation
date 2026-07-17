@@ -47,7 +47,7 @@ export function Coverage() {
             className="text-brand-400"
             aria-hidden="true"
           />
-          <h3 className="mt-4 text-(--text-h3) text-white">
+          <h3 className="mt-4 type-h3 text-white">
             Living abroad? Arrange care for your parents from anywhere.
           </h3>
           <p className="mt-3 text-white/70">

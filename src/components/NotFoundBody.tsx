@@ -13,7 +13,7 @@ export function NotFoundBody() {
         >
           404
         </p>
-        <h1 className="mt-4 text-(--text-h2)">
+        <h1 className="mt-4 type-h2">
           We could not find that page
         </h1>
         <p className="measure mx-auto mt-4 text-ink-600">

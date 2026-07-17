@@ -59,14 +59,14 @@ export function Component() {
           </Reveal>
           <Reveal>
             {/* AB02 preserved verbatim, rendered whole. */}
-            <p className="text-(--text-lead) leading-relaxed text-ink-700">
+            <p className="type-lead leading-relaxed text-ink-700">
               {foundingParagraph}
             </p>
 
             <hr className="my-8 border-ink-200" />
 
             {/* AB03-AB06 preserved verbatim. */}
-            <h2 className="text-(--text-h3)">Our objectives</h2>
+            <h2 className="type-h3">Our objectives</h2>
             <ul className="mt-5 space-y-4">
               {objectivesToVoice.map((obj) => (
                 <li key={obj} className="flex gap-3">
@@ -97,7 +97,7 @@ export function Component() {
               className="text-brand-400"
               aria-hidden="true"
             />
-            <h2 className="mt-4 text-(--text-h3) text-white">
+            <h2 className="mt-4 type-h3 text-white">
               {mission.heading}
             </h2>
             <p className="mt-3 text-white/70">{mission.body}</p>
@@ -108,7 +108,7 @@ export function Component() {
               className="text-brand-400"
               aria-hidden="true"
             />
-            <h2 className="mt-4 text-(--text-h3) text-white">
+            <h2 className="mt-4 type-h3 text-white">
               {vision.heading}
             </h2>
             <p className="mt-3 text-white/70">{vision.body}</p>
@@ -120,7 +120,7 @@ export function Component() {
       <Section size="wide">
         <div className="grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <h2 className="text-(--text-h2)">{personalCare.heading}</h2>
+            <h2 className="type-h2">{personalCare.heading}</h2>
             {personalCare.paragraphs.map((p) => (
               <p key={p} className="mt-4 text-ink-700">
                 {p}
@@ -128,7 +128,7 @@ export function Component() {
             ))}
           </Reveal>
           <Reveal>
-            <h2 className="text-(--text-h2)">{qualityOfLife.heading}</h2>
+            <h2 className="type-h2">{qualityOfLife.heading}</h2>
             {qualityOfLife.paragraphs.map((p) => (
               <p key={p} className="mt-4 text-ink-700">
                 {p}

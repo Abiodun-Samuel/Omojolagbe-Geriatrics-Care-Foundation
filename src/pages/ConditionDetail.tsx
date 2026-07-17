@@ -58,7 +58,7 @@ export function Component() {
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal>
-            <h2 className="text-(--text-h3)">How we help</h2>
+            <h2 className="type-h3">How we help</h2>
             <ul className="mt-5 space-y-3">
               {condition.approach.map((a) => (
                 <li key={a} className="flex items-start gap-3">
@@ -91,7 +91,7 @@ export function Component() {
 
       {related.length > 0 && (
         <Section tone="sunken" size="wide">
-          <h2 className="text-(--text-h3)">Services that support this</h2>
+          <h2 className="type-h3">Services that support this</h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((s) => (
               <ServiceCard key={s.slug} service={s} />

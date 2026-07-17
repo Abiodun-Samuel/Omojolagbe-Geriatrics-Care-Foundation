@@ -57,11 +57,11 @@ export function PageHero({
             {eyebrow}
           </p>
         )}
-        <h1 className="mt-3 max-w-4xl text-(--text-h1) text-white">
+        <h1 className="mt-3 max-w-4xl type-h1 text-white">
           {title}
         </h1>
         {intro && (
-          <p className="mt-5 max-w-2xl text-(--text-lead) text-white/75">
+          <p className="mt-5 max-w-2xl type-lead text-white/75">
             {intro}
           </p>
         )}

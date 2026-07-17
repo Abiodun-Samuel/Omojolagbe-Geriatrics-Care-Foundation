@@ -36,7 +36,7 @@ export function Component() {
             <RevealItem key={c.slug}>
               <Link
                 to={`/who-we-care-for/${c.slug}`}
-                className="card group flex h-full flex-col p-6 transition-[transform,box-shadow] duration-[var(--dur-fast)] hover:-translate-y-1 hover:shadow-pop"
+                className="card group flex h-full flex-col p-6 transition-[transform,box-shadow] duration-(--dur-fast) hover:-translate-y-1 hover:shadow-pop"
               >
                 <h2 className="text-[1.2rem] font-semibold text-ink-900">
                   {c.name}
@@ -48,7 +48,7 @@ export function Component() {
                   How we help
                   <ArrowUpRight
                     size={16}
-                    className="transition-transform duration-[var(--dur-fast)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="transition-transform duration-(--dur-fast) group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     aria-hidden="true"
                   />
                 </span>

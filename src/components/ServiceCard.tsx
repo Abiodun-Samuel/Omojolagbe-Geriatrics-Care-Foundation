@@ -6,7 +6,7 @@ export function ServiceCard({ service }: { service: Service }) {
   return (
     <Link
       to={`/services/${service.slug}`}
-      className="card group flex flex-col p-6 transition-[transform,box-shadow] duration-[var(--dur-fast)] hover:-translate-y-1 hover:shadow-pop"
+      className="card group flex flex-col p-6 transition-[transform,box-shadow] duration-(--dur-fast) hover:-translate-y-1 hover:shadow-pop"
     >
       <span
         className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-brand-100"
@@ -24,7 +24,7 @@ export function ServiceCard({ service }: { service: Service }) {
         Learn more
         <ArrowUpRight
           size={16}
-          className="transition-transform duration-[var(--dur-fast)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          className="transition-transform duration-(--dur-fast) group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           aria-hidden="true"
         />
       </span>

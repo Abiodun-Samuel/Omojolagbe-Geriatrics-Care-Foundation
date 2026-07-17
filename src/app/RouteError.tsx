@@ -29,7 +29,7 @@ export function RouteError() {
           >
             {code}
           </p>
-          <h1 className="mt-4 text-(--text-h2)">{heading}</h1>
+          <h1 className="mt-4 type-h2">{heading}</h1>
           <p className="measure mx-auto mt-4 text-ink-600">
             {body}
           </p>

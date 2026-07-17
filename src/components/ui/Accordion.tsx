@@ -34,7 +34,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
                   size={20}
                   aria-hidden="true"
                   className={cn(
-                    "shrink-0 text-ink-500 transition-transform duration-[var(--dur-fast)]",
+                    "shrink-0 text-ink-500 transition-transform duration-(--dur-fast)",
                     isOpen && "rotate-180",
                   )}
                 />

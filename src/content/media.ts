@@ -70,13 +70,6 @@ import g24 from "@/assets/images/gallery/gallery24.jpg";
 import g25 from "@/assets/images/gallery/gallery25.jpg";
 import g26 from "@/assets/images/gallery/gallery26.jpg";
 
-import v1 from "@/assets/images/videos/video1.mp4";
-import v2 from "@/assets/images/videos/video2.mp4";
-import v3 from "@/assets/images/videos/video3.mp4";
-import v4 from "@/assets/images/videos/video4.mp4";
-import v5 from "@/assets/images/videos/video5.mp4";
-import v6 from "@/assets/images/videos/video6.mp4";
-
 const localAlt =
   "Omojolagbe Geriatric Care caregivers and elderly people in Ibadan, Nigeria";
 
@@ -172,4 +165,13 @@ export const galleryPhotos: Media[] = [
   alt: "Omojolagbe Geriatric Care Foundation Gallery",
 }));
 
-export const galleryVideos: string[] = [v1, v2, v3, v4, v5, v6];
+/** Videos are served from /public as static files rather than bundled into
+ *  JS (they are ~21MB total). Referenced by URL, loaded only on demand. */
+export const galleryVideos: string[] = [
+  "/media/videos/video1.mp4",
+  "/media/videos/video2.mp4",
+  "/media/videos/video3.mp4",
+  "/media/videos/video4.mp4",
+  "/media/videos/video5.mp4",
+  "/media/videos/video6.mp4",
+];

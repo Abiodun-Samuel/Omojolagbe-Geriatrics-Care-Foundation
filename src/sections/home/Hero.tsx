@@ -47,14 +47,14 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="mt-5 text-(--text-hero) leading-[0.98] tracking-[-0.02em]"
+              className="mt-5 type-hero leading-[0.98] tracking-[-0.02em]"
             >
               Care your parents can feel, that you can see.
             </motion.h1>
 
             <motion.p
               variants={item}
-              className="measure-lead mt-6 text-(--text-lead) text-ink-600"
+              className="measure-lead mt-6 type-lead text-ink-600"
             >
               Compassionate home care for elderly Nigerians. Vetted caregivers
               and licensed nurses in Ibadan, arranged from home or from abroad,

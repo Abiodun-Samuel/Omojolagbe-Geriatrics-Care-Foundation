@@ -46,7 +46,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-40 transition-[background-color,box-shadow,backdrop-filter] duration-[var(--dur-base)]",
+        "fixed inset-x-0 top-0 z-40 transition-[background-color,box-shadow,backdrop-filter] duration-(--dur-base)",
         scrolled
           ? "bg-paper/90 shadow-card backdrop-blur"
           : "bg-transparent",
@@ -72,7 +72,7 @@ export function Header() {
                         {item.label}
                         <ChevronDown size={15} aria-hidden="true" />
                       </button>
-                      <div className="invisible absolute left-0 top-full w-72 pt-2 opacity-0 transition-opacity duration-[var(--dur-fast)] group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                      <div className="invisible absolute left-0 top-full w-72 pt-2 opacity-0 transition-opacity duration-(--dur-fast) group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                         <ul className="card overflow-hidden p-2">
                           {item.children.map((child) => (
                             <li key={child.label}>

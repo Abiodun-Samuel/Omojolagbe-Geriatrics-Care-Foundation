@@ -18,7 +18,7 @@ export function WhoWeCareFor() {
           <RevealItem key={c.slug}>
             <Link
               to={`/who-we-care-for/${c.slug}`}
-              className="group flex h-full flex-col justify-between rounded-card border border-ink-200 bg-paper-raised p-5 transition-[transform,box-shadow] duration-[var(--dur-fast)] hover:-translate-y-1 hover:shadow-card"
+              className="group flex h-full flex-col justify-between rounded-card border border-ink-200 bg-paper-raised p-5 transition-[transform,box-shadow] duration-(--dur-fast) hover:-translate-y-1 hover:shadow-card"
             >
               <div>
                 <h3 className="text-[1.05rem] font-semibold text-ink-900">
@@ -30,7 +30,7 @@ export function WhoWeCareFor() {
               </div>
               <ArrowUpRight
                 size={18}
-                className="mt-4 text-brand-800 transition-transform duration-[var(--dur-fast)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="mt-4 text-brand-800 transition-transform duration-(--dur-fast) group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 aria-hidden="true"
               />
             </Link>

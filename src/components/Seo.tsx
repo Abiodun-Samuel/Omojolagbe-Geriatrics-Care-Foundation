@@ -50,12 +50,12 @@ export function Seo({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
+      {/* JSON-LD must be serialised into the script tag. The content is our
+          own structured data, never user input. */}
       {jsonLd?.map((obj, i) => (
         <script
-          // eslint-disable-next-line react/no-danger
           key={i}
           type="application/ld+json"
-          // JSON-LD must be a raw string in a script tag.
           dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }}
         />
       ))}

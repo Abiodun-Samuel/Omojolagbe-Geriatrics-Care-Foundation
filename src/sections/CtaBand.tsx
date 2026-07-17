@@ -19,7 +19,7 @@ export function CtaBand({
     <section className="bg-ink-950">
       <Container size="content" className="py-[clamp(3.5rem,7vw,6rem)]">
         <Reveal className="relative overflow-hidden rounded-lg bg-brand-400 px-6 py-12 text-center sm:px-12">
-          <h2 className="mx-auto max-w-2xl text-(--text-h2) text-ink-900">
+          <h2 className="mx-auto max-w-2xl type-h2 text-ink-900">
             {title}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-ink-800">
@@ -28,7 +28,7 @@ export function CtaBand({
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/book-assessment"
-              className="inline-flex items-center gap-2 rounded-pill bg-ink-900 px-6 py-3 text-[0.95rem] font-semibold text-white transition-transform duration-[var(--dur-fast)] hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-pill bg-ink-900 px-6 py-3 text-[0.95rem] font-semibold text-white transition-transform duration-(--dur-fast) hover:-translate-y-0.5"
             >
               Book a free assessment
               <ArrowRight size={18} aria-hidden="true" />

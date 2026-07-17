@@ -253,6 +253,38 @@
   max-width: var(--measure-lead);
 }
 
+/* Named type roles. `text-*` in Tailwind covers both font-size and color, so
+ * spelling sizes as text-(--text-lead) collides with text-ink-600. Named role
+ * utilities keep size and colour orthogonal, and read better in JSX. */
+@utility type-hero {
+  font-size: var(--text-hero);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+@utility type-h1 {
+  font-size: var(--text-h1);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+@utility type-h2 {
+  font-size: var(--text-h2);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+@utility type-h3 {
+  font-size: var(--text-h3);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+}
+@utility type-lead {
+  font-size: var(--text-lead);
+  line-height: 1.55;
+}
+@utility type-body {
+  font-size: var(--text-body);
+  line-height: 1.65;
+}
+
 /* Reduced motion: collapse everything to a short fade (Phase 7). */
 @media (prefers-reduced-motion: reduce) {
   html {

@@ -1,3 +1,6 @@
+import { LegalPage } from "@/sections/LegalPage";
+import { privacyDoc } from "@/content/legal";
+
 export function Component() {
-  return <div className="py-24 text-center">Privacy</div>;
+  return <LegalPage doc={privacyDoc} path="/privacy" />;
 }
