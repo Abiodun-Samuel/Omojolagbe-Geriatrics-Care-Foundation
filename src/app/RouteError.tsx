@@ -24,13 +24,13 @@ export function RouteError() {
       <div className="flex min-h-[70vh] items-center py-24">
         <Container size="prose" className="text-center">
           <p
-            className="font-display text-[clamp(4rem,18vw,9rem)] font-semibold leading-none text-[var(--color-brand-400)]"
+            className="font-display text-[clamp(4rem,18vw,9rem)] font-semibold leading-none text-brand-400"
             style={{ WebkitTextStroke: "1px var(--color-ink-900)" }}
           >
             {code}
           </p>
-          <h1 className="mt-4 text-[var(--text-h2)]">{heading}</h1>
-          <p className="measure mx-auto mt-4 text-[var(--color-ink-600)]">
+          <h1 className="mt-4 text-(--text-h2)">{heading}</h1>
+          <p className="measure mx-auto mt-4 text-ink-600">
             {body}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

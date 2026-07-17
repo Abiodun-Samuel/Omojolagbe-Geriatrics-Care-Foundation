@@ -23,12 +23,12 @@ export function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="bg-[var(--color-ink-900)] text-white">
+    <section className="bg-ink-900 text-white">
       <Container size="wide" className="py-16 md:py-24">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/60">
             <li>
-              <Link to="/" className="hover:text-[var(--color-brand-300)]">
+              <Link to="/" className="hover:text-brand-300">
                 Home
               </Link>
             </li>
@@ -38,7 +38,7 @@ export function PageHero({
                 {c.to ? (
                   <Link
                     to={c.to}
-                    className="hover:text-[var(--color-brand-300)]"
+                    className="hover:text-brand-300"
                   >
                     {c.label}
                   </Link>
@@ -53,15 +53,15 @@ export function PageHero({
         </nav>
 
         {eyebrow && (
-          <p className="eyebrow mt-6 text-[var(--color-brand-300)]">
+          <p className="eyebrow mt-6 text-brand-300">
             {eyebrow}
           </p>
         )}
-        <h1 className="mt-3 max-w-4xl text-[var(--text-h1)] text-white">
+        <h1 className="mt-3 max-w-4xl text-(--text-h1) text-white">
           {title}
         </h1>
         {intro && (
-          <p className="mt-5 max-w-2xl text-[var(--text-lead)] text-white/75">
+          <p className="mt-5 max-w-2xl text-(--text-lead) text-white/75">
             {intro}
           </p>
         )}

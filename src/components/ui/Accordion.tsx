@@ -11,7 +11,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
   const baseId = useId();
 
   return (
-    <div className="divide-y divide-[var(--color-ink-200)] border-y border-[var(--color-ink-200)]">
+    <div className="divide-y divide-ink-200 border-y border-ink-200">
       {items.map((item, i) => {
         const isOpen = open === i;
         const btnId = `${baseId}-btn-${i}`;
@@ -27,14 +27,14 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
                 onClick={() => setOpen(isOpen ? null : i)}
                 className="flex w-full items-center justify-between gap-4 py-5 text-left"
               >
-                <span className="text-[1.05rem] font-semibold text-[var(--color-ink-900)]">
+                <span className="text-[1.05rem] font-semibold text-ink-900">
                   {item.q}
                 </span>
                 <ChevronDown
                   size={20}
                   aria-hidden="true"
                   className={cn(
-                    "shrink-0 text-[var(--color-ink-500)] transition-transform duration-[var(--dur-fast)]",
+                    "shrink-0 text-ink-500 transition-transform duration-[var(--dur-fast)]",
                     isOpen && "rotate-180",
                   )}
                 />
@@ -45,7 +45,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
               role="region"
               aria-labelledby={btnId}
               hidden={!isOpen}
-              className="pb-5 text-[var(--color-ink-600)]"
+              className="pb-5 text-ink-600"
             >
               {item.a}
             </div>

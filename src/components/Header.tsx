@@ -48,7 +48,7 @@ export function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-40 transition-[background-color,box-shadow,backdrop-filter] duration-[var(--dur-base)]",
         scrolled
-          ? "bg-[var(--color-paper)]/90 shadow-[var(--shadow-card)] backdrop-blur"
+          ? "bg-paper/90 shadow-card backdrop-blur"
           : "bg-transparent",
       )}
     >
@@ -66,7 +66,7 @@ export function Header() {
                     <>
                       <button
                         type="button"
-                        className="flex items-center gap-1 rounded-[var(--radius-sm)] px-3 py-2 text-[0.95rem] font-medium text-[var(--color-ink-700)] transition-colors hover:text-[var(--color-ink-900)] group-focus-within:text-[var(--color-ink-900)]"
+                        className="flex items-center gap-1 rounded-sm px-3 py-2 text-[0.95rem] font-medium text-ink-700 transition-colors hover:text-ink-900 group-focus-within:text-ink-900"
                         aria-haspopup="true"
                       >
                         {item.label}
@@ -78,13 +78,13 @@ export function Header() {
                             <li key={child.label}>
                               <Link
                                 to={child.to}
-                                className="block rounded-[var(--radius-sm)] px-3 py-2 hover:bg-[var(--color-paper-sunken)]"
+                                className="block rounded-sm px-3 py-2 hover:bg-paper-sunken"
                               >
-                                <span className="block text-[0.9rem] font-semibold text-[var(--color-ink-900)]">
+                                <span className="block text-[0.9rem] font-semibold text-ink-900">
                                   {child.label}
                                 </span>
                                 {child.description && (
-                                  <span className="block text-sm text-[var(--color-ink-600)]">
+                                  <span className="block text-sm text-ink-600">
                                     {child.description}
                                   </span>
                                 )}
@@ -100,10 +100,10 @@ export function Header() {
                       end={item.to === "/"}
                       className={({ isActive }) =>
                         cn(
-                          "block rounded-[var(--radius-sm)] px-3 py-2 text-[0.95rem] font-medium transition-colors",
+                          "block rounded-sm px-3 py-2 text-[0.95rem] font-medium transition-colors",
                           isActive
-                            ? "text-[var(--color-ink-900)]"
-                            : "text-[var(--color-ink-700)] hover:text-[var(--color-ink-900)]",
+                            ? "text-ink-900"
+                            : "text-ink-700 hover:text-ink-900",
                         )
                       }
                     >
@@ -125,7 +125,7 @@ export function Header() {
           <button
             ref={toggleRef}
             type="button"
-            className="btn-ghost inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-sm)] lg:hidden"
+            className="btn-ghost inline-flex h-11 w-11 items-center justify-center rounded-sm lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -147,7 +147,7 @@ export function Header() {
           aria-modal="true"
           aria-label="Site menu"
         >
-          <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-[var(--color-ink-200)] bg-[var(--color-paper)] pb-8">
+          <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-ink-200 bg-paper pb-8">
             <Container>
               <ul className="flex flex-col py-4">
                 {primaryNav.map((item, i) => (
@@ -156,7 +156,7 @@ export function Header() {
                       <Link
                         ref={i === 0 ? firstLinkRef : undefined}
                         to={item.to}
-                        className="block py-2 text-lg font-semibold text-[var(--color-ink-900)]"
+                        className="block py-2 text-lg font-semibold text-ink-900"
                       >
                         {item.label}
                       </Link>
@@ -173,7 +173,7 @@ export function Header() {
                             <li key={child.label}>
                               <Link
                                 to={child.to}
-                                className="block py-2 text-[var(--color-ink-700)]"
+                                className="block py-2 text-ink-700"
                               >
                                 {child.label}
                               </Link>

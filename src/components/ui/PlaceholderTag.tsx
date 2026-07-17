@@ -12,7 +12,7 @@ export function PlaceholderTag({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] bg-[var(--color-paper-sunken)] px-2.5 py-0.5 text-xs font-medium text-[var(--color-ink-500)]",
+        "inline-flex items-center gap-1.5 rounded-pill bg-paper-sunken px-2.5 py-0.5 text-xs font-medium text-ink-500",
         className,
       )}
     >

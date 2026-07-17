@@ -10,7 +10,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 bg-[var(--color-ink-950)] text-white/80">
+    <footer className="mt-24 bg-ink-950 text-white/80">
       <Container size="wide" className="py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
           <div>
@@ -39,7 +39,7 @@ export function Footer() {
                     <li key={link.label}>
                       <Link
                         to={link.to}
-                        className="text-sm text-white/70 underline-offset-4 transition-colors hover:text-[var(--color-brand-300)] hover:underline"
+                        className="text-sm text-white/70 underline-offset-4 transition-colors hover:text-brand-300 hover:underline"
                       >
                         {link.label}
                       </Link>
@@ -55,7 +55,7 @@ export function Footer() {
           <p className="flex items-start gap-2 text-sm text-white/70">
             <MapPin
               size={18}
-              className="mt-0.5 shrink-0 text-[var(--color-brand-400)]"
+              className="mt-0.5 shrink-0 text-brand-400"
               aria-hidden="true"
             />
             {site.address.full}
@@ -69,7 +69,7 @@ export function Footer() {
               >
                 <Phone
                   size={16}
-                  className="text-[var(--color-brand-400)]"
+                  className="text-brand-400"
                   aria-hidden="true"
                 />
                 {p}
@@ -83,7 +83,7 @@ export function Footer() {
             >
               <Mail
                 size={16}
-                className="shrink-0 text-[var(--color-brand-400)]"
+                className="shrink-0 text-brand-400"
                 aria-hidden="true"
               />
               {site.emails.homeCare}
@@ -94,7 +94,7 @@ export function Footer() {
             >
               <Mail
                 size={16}
-                className="shrink-0 text-[var(--color-brand-400)]"
+                className="shrink-0 text-brand-400"
                 aria-hidden="true"
               />
               {site.emails.foundation}
@@ -108,7 +108,7 @@ export function Footer() {
           >
             <Facebook
               size={16}
-              className="text-[var(--color-brand-400)]"
+              className="text-brand-400"
               aria-hidden="true"
             />
             Connect with us on Facebook

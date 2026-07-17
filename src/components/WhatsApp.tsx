@@ -23,8 +23,8 @@ export function WhatsAppButton({
       rel="noopener noreferrer"
       className={cn(
         variant === "chip"
-          ? "inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-[var(--color-verify-500)] px-5 py-3 text-[0.95rem] font-semibold text-white transition-[transform,background-color] duration-[var(--dur-fast)] hover:-translate-y-0.5 hover:bg-[var(--color-verify-600)]"
-          : "inline-flex items-center gap-1.5 font-medium text-[var(--color-verify-600)] underline-offset-4 hover:underline",
+          ? "inline-flex items-center gap-2 rounded-pill bg-verify-500 px-5 py-3 text-[0.95rem] font-semibold text-white transition-[transform,background-color] duration-[var(--dur-fast)] hover:-translate-y-0.5 hover:bg-verify-600"
+          : "inline-flex items-center gap-1.5 font-medium text-verify-600 underline-offset-4 hover:underline",
         className,
       )}
     >
@@ -42,7 +42,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-verify-500)] text-white shadow-[var(--shadow-pop)] transition-[transform,background-color] duration-[var(--dur-fast)] hover:-translate-y-0.5 hover:bg-[var(--color-verify-600)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-focus)] motion-reduce:transition-none"
+      className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-verify-500 text-white shadow-pop transition-[transform,background-color] duration-[var(--dur-fast)] hover:-translate-y-0.5 hover:bg-verify-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus motion-reduce:transition-none"
     >
       <MessageCircle size={24} aria-hidden="true" />
     </a>

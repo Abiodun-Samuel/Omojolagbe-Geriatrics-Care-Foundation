@@ -28,8 +28,8 @@ export function SmartImage({
   return (
     <div
       className={cn(
-        "relative overflow-hidden bg-[var(--color-paper-sunken)]",
-        rounded && "rounded-[var(--radius-card)]",
+        "relative overflow-hidden bg-paper-sunken",
+        rounded && "rounded-card",
         className,
       )}
       style={{ aspectRatio: `${media.width} / ${media.height}` }}

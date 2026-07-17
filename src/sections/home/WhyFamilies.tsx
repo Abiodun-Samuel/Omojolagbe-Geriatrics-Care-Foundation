@@ -43,10 +43,10 @@ export function WhyFamilies() {
           {reasons.map((r) => (
             <RevealItem key={r.title} className="flex gap-4">
               <span
-                className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-400)]"
+                className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400"
                 aria-hidden="true"
               >
-                <Check size={16} className="text-[var(--color-ink-900)]" />
+                <Check size={16} className="text-ink-900" />
               </span>
               <div>
                 <h3 className="text-[1.1rem] font-semibold text-white">

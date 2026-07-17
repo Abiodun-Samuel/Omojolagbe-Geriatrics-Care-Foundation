@@ -7,17 +7,17 @@ export function TestimonialCard({ item }: { item: Testimonial }) {
     <figure className="card flex h-full flex-col p-6">
       <Quote
         size={26}
-        className="text-[var(--color-brand-500)]"
+        className="text-brand-500"
         aria-hidden="true"
       />
-      <blockquote className="mt-3 flex-1 text-[var(--color-ink-800)]">
+      <blockquote className="mt-3 flex-1 text-ink-800">
         {item.quote}
       </blockquote>
-      <figcaption className="mt-5 border-t border-[var(--color-ink-200)] pt-4">
-        <p className="font-semibold text-[var(--color-ink-900)]">
+      <figcaption className="mt-5 border-t border-ink-200 pt-4">
+        <p className="font-semibold text-ink-900">
           {item.name}
         </p>
-        <p className="text-sm text-[var(--color-ink-600)]">
+        <p className="text-sm text-ink-600">
           {item.relationship} &middot; {item.city}
         </p>
         {item.placeholder && (

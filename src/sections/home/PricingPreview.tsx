@@ -24,7 +24,7 @@ export function PricingPreview() {
       <p className="mt-8 text-center">
         <Link
           to="/pricing"
-          className="font-semibold text-[var(--color-brand-800)] hover:underline"
+          className="font-semibold text-brand-800 hover:underline"
         >
           See what affects cost and funding options
         </Link>

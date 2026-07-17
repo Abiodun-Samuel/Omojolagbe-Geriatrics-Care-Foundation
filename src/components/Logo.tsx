@@ -34,7 +34,7 @@ export function Logo({
         decoding="async"
         className={cn(
           "shrink-0 rounded-full object-contain",
-          onDark && "bg-[var(--color-paper)] p-0.5",
+          onDark && "bg-paper p-0.5",
         )}
         style={{ width: size, height: size }}
       />
@@ -43,7 +43,7 @@ export function Logo({
           <span
             className={cn(
               "font-display text-[1.05rem] font-semibold tracking-tight",
-              onDark ? "text-white" : "text-[var(--color-ink-900)]",
+              onDark ? "text-white" : "text-ink-900",
             )}
           >
             Omojolagbe
@@ -51,7 +51,7 @@ export function Logo({
           <span
             className={cn(
               "text-[0.68rem] font-medium uppercase tracking-[0.16em]",
-              onDark ? "text-white/70" : "text-[var(--color-ink-600)]",
+              onDark ? "text-white/70" : "text-ink-600",
             )}
           >
             Geriatric Care

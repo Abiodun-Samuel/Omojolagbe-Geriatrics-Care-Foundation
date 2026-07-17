@@ -16,19 +16,19 @@ export function CtaBand({
   body = "Tell us what your family is facing. We will listen, then recommend only the care you actually need. No charge, no pressure.",
 }: CtaBandProps) {
   return (
-    <section className="bg-[var(--color-ink-950)]">
+    <section className="bg-ink-950">
       <Container size="content" className="py-[clamp(3.5rem,7vw,6rem)]">
-        <Reveal className="relative overflow-hidden rounded-[var(--radius-lg)] bg-[var(--color-brand-400)] px-6 py-12 text-center sm:px-12">
-          <h2 className="mx-auto max-w-2xl text-[var(--text-h2)] text-[var(--color-ink-900)]">
+        <Reveal className="relative overflow-hidden rounded-lg bg-brand-400 px-6 py-12 text-center sm:px-12">
+          <h2 className="mx-auto max-w-2xl text-(--text-h2) text-ink-900">
             {title}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-[var(--color-ink-800)]">
+          <p className="mx-auto mt-4 max-w-xl text-ink-800">
             {body}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/book-assessment"
-              className="inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-[var(--color-ink-900)] px-6 py-3 text-[0.95rem] font-semibold text-white transition-transform duration-[var(--dur-fast)] hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-pill bg-ink-900 px-6 py-3 text-[0.95rem] font-semibold text-white transition-transform duration-[var(--dur-fast)] hover:-translate-y-0.5"
             >
               Book a free assessment
               <ArrowRight size={18} aria-hidden="true" />

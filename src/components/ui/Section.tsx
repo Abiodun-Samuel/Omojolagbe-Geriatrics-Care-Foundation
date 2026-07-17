@@ -13,9 +13,9 @@ type SectionProps = {
 };
 
 const toneMap = {
-  paper: "bg-[var(--color-paper)]",
-  sunken: "bg-[var(--color-paper-sunken)]",
-  ink: "bg-[var(--color-ink-900)] text-white",
+  paper: "bg-paper",
+  sunken: "bg-paper-sunken",
+  ink: "bg-ink-900 text-white",
 } as const;
 
 export function Section({

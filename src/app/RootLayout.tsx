@@ -11,7 +11,7 @@ export function RootLayout() {
     <MotionConfig reducedMotion="user">
       <a
         href="#main"
-        className="sr-only rounded-[var(--radius-sm)] bg-[var(--color-ink-900)] px-4 py-2 font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50"
+        className="sr-only rounded-sm bg-ink-900 px-4 py-2 font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50"
       >
         Skip to content
       </a>

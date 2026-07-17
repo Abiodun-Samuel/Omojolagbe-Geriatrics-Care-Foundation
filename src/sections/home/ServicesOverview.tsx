@@ -18,7 +18,7 @@ export function ServicesOverview() {
         />
         <Link
           to="/services"
-          className="inline-flex items-center gap-1 font-semibold text-[var(--color-brand-800)] hover:underline"
+          className="inline-flex items-center gap-1 font-semibold text-brand-800 hover:underline"
         >
           All services
           <ArrowRight size={16} aria-hidden="true" />

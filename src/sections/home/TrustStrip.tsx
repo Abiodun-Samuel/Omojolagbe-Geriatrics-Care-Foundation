@@ -8,7 +8,7 @@ export function TrustStrip() {
   return (
     <section
       aria-label="Why families trust us"
-      className="border-y border-[var(--color-ink-200)] bg-[var(--color-paper-raised)] py-[clamp(2.5rem,4vw,3.5rem)]"
+      className="border-y border-ink-200 bg-paper-raised py-[clamp(2.5rem,4vw,3.5rem)]"
     >
       <Container size="wide">
         <RevealGroup className="grid gap-x-8 gap-y-10 md:grid-cols-3">
@@ -19,18 +19,18 @@ export function TrustStrip() {
             >
               <stat.icon
                 size={28}
-                className="shrink-0 text-[var(--color-ink-400)]"
+                className="shrink-0 text-ink-400"
                 aria-hidden="true"
               />
               <div>
-                <p className="font-display text-[2rem] font-semibold leading-none text-[var(--color-ink-900)]">
+                <p className="font-display text-[2rem] font-semibold leading-none text-ink-900">
                   <CountUp
                     to={stat.value}
                     prefix={stat.prefix}
                     suffix={stat.suffix}
                   />
                 </p>
-                <p className="mt-1 text-sm text-[var(--color-ink-600)]">
+                <p className="mt-1 text-sm text-ink-600">
                   {stat.label}
                 </p>
               </div>
@@ -38,19 +38,19 @@ export function TrustStrip() {
           ))}
         </RevealGroup>
 
-        <div className="mt-10 grid gap-6 border-t border-[var(--color-ink-200)] pt-8 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 border-t border-ink-200 pt-8 md:grid-cols-3">
           {trustPoints.map((point) => (
             <div key={point.title} className="flex gap-3">
               <point.icon
                 size={22}
-                className="mt-0.5 shrink-0 text-[var(--color-verify-500)]"
+                className="mt-0.5 shrink-0 text-verify-500"
                 aria-hidden="true"
               />
               <div>
-                <p className="font-semibold text-[var(--color-ink-900)]">
+                <p className="font-semibold text-ink-900">
                   {point.title}
                 </p>
-                <p className="mt-1 text-sm text-[var(--color-ink-600)]">
+                <p className="mt-1 text-sm text-ink-600">
                   {point.body}
                 </p>
               </div>

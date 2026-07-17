@@ -8,9 +8,9 @@ type ContainerProps = {
 };
 
 const sizeMap = {
-  prose: "max-w-[var(--container-prose)]",
-  content: "max-w-[var(--container-content)]",
-  wide: "max-w-[var(--container-wide)]",
+  prose: "max-w-(--container-prose)",
+  content: "max-w-(--container-content)",
+  wide: "max-w-(--container-wide)",
 } as const;
 
 export function Container({

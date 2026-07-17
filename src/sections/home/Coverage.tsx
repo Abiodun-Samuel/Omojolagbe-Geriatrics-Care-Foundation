@@ -25,14 +25,14 @@ export function Coverage() {
             <li key={c.name} className="card flex items-center gap-3 p-5">
               <MapPin
                 size={22}
-                className="shrink-0 text-[var(--color-brand-600)]"
+                className="shrink-0 text-brand-600"
                 aria-hidden="true"
               />
               <div>
-                <p className="font-semibold text-[var(--color-ink-900)]">
+                <p className="font-semibold text-ink-900">
                   {c.name}
                 </p>
-                <p className="text-sm text-[var(--color-ink-600)]">
+                <p className="text-sm text-ink-600">
                   {c.status}
                 </p>
               </div>
@@ -41,13 +41,13 @@ export function Coverage() {
         </ul>
 
         {/* Diaspora panel: our differentiator (Phase 1). */}
-        <div className="flex flex-col rounded-[var(--radius-card)] bg-[var(--color-ink-900)] p-7 text-white">
+        <div className="flex flex-col rounded-card bg-ink-900 p-7 text-white">
           <Globe2
             size={30}
-            className="text-[var(--color-brand-400)]"
+            className="text-brand-400"
             aria-hidden="true"
           />
-          <h3 className="mt-4 text-[var(--text-h3)] text-white">
+          <h3 className="mt-4 text-(--text-h3) text-white">
             Living abroad? Arrange care for your parents from anywhere.
           </h3>
           <p className="mt-3 text-white/70">
@@ -56,7 +56,7 @@ export function Coverage() {
           </p>
           <Link
             to="/diaspora"
-            className="mt-6 inline-flex w-fit items-center gap-2 font-semibold text-[var(--color-brand-400)] hover:underline"
+            className="mt-6 inline-flex w-fit items-center gap-2 font-semibold text-brand-400 hover:underline"
           >
             For diaspora families
             <ArrowRight size={18} aria-hidden="true" />

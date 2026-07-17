@@ -14,9 +14,9 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
   return (
     <div
       className={cn(
-        "flex h-full flex-col rounded-[var(--radius-card)] p-6",
+        "flex h-full flex-col rounded-card p-6",
         plan.featured
-          ? "bg-[var(--color-ink-900)] text-white shadow-[var(--shadow-pop)]"
+          ? "bg-ink-900 text-white shadow-pop"
           : "card",
       )}
     >
@@ -24,13 +24,13 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
         <h3
           className={cn(
             "text-[1.2rem] font-semibold",
-            plan.featured ? "text-white" : "text-[var(--color-ink-900)]",
+            plan.featured ? "text-white" : "text-ink-900",
           )}
         >
           {plan.name}
         </h3>
         {plan.featured && (
-          <span className="chip bg-[var(--color-brand-400)] text-[var(--color-ink-900)]">
+          <span className="chip bg-brand-400 text-ink-900">
             Most chosen
           </span>
         )}
@@ -39,7 +39,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
       <p
         className={cn(
           "mt-2 text-sm",
-          plan.featured ? "text-white/70" : "text-[var(--color-ink-600)]",
+          plan.featured ? "text-white/70" : "text-ink-600",
         )}
       >
         {plan.summary}
@@ -49,7 +49,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
         <span
           className={cn(
             "text-sm",
-            plan.featured ? "text-white/60" : "text-[var(--color-ink-500)]",
+            plan.featured ? "text-white/60" : "text-ink-500",
           )}
         >
           From{" "}
@@ -57,7 +57,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
         <span
           className={cn(
             "font-display text-[2rem] font-semibold tnum",
-            plan.featured ? "text-white" : "text-[var(--color-ink-900)]",
+            plan.featured ? "text-white" : "text-ink-900",
           )}
         >
           {naira.format(plan.fromNaira)}
@@ -65,7 +65,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
         <span
           className={cn(
             "text-sm",
-            plan.featured ? "text-white/60" : "text-[var(--color-ink-500)]",
+            plan.featured ? "text-white/60" : "text-ink-500",
           )}
         >
           {" "}
@@ -81,8 +81,8 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
               className={cn(
                 "mt-0.5 shrink-0",
                 plan.featured
-                  ? "text-[var(--color-brand-400)]"
-                  : "text-[var(--color-verify-500)]",
+                  ? "text-brand-400"
+                  : "text-verify-500",
               )}
               aria-hidden="true"
             />

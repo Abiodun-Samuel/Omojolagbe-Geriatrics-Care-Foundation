@@ -29,7 +29,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[var(--color-paper)] pb-[clamp(3rem,6vw,6rem)] pt-[clamp(2rem,5vw,4rem)]">
+    <section className="relative overflow-hidden bg-paper pb-[clamp(3rem,6vw,6rem)] pt-[clamp(2rem,5vw,4rem)]">
       <Container size="wide">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div variants={container} initial="hidden" animate="visible">
@@ -47,14 +47,14 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="mt-5 text-[var(--text-hero)] leading-[0.98] tracking-[-0.02em]"
+              className="mt-5 text-(--text-hero) leading-[0.98] tracking-[-0.02em]"
             >
               Care your parents can feel, that you can see.
             </motion.h1>
 
             <motion.p
               variants={item}
-              className="measure-lead mt-6 text-[var(--text-lead)] text-[var(--color-ink-600)]"
+              className="measure-lead mt-6 text-(--text-lead) text-ink-600"
             >
               Compassionate home care for elderly Nigerians. Vetted caregivers
               and licensed nurses in Ibadan, arranged from home or from abroad,
@@ -83,13 +83,13 @@ export function Hero() {
               media={media.heroPrimary}
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="shadow-[var(--shadow-pop)]"
+              className="shadow-pop"
             />
             <div className="card absolute -bottom-5 -left-4 hidden max-w-[15rem] p-4 sm:block">
-              <p className="text-sm font-semibold text-[var(--color-ink-900)]">
+              <p className="text-sm font-semibold text-ink-900">
                 A report after every visit
               </p>
-              <p className="mt-1 text-sm text-[var(--color-ink-600)]">
+              <p className="mt-1 text-sm text-ink-600">
                 So a family member anywhere always knows how their parent is
                 doing.
               </p>

@@ -31,7 +31,7 @@ export function SectionHeading({
       {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
       <Tag
         className={cn(
-          as === "h2" ? "text-[var(--text-h2)]" : "text-[var(--text-h3)]",
+          as === "h2" ? "text-(--text-h2)" : "text-(--text-h3)",
         )}
       >
         {title}
@@ -39,7 +39,7 @@ export function SectionHeading({
       {intro && (
         <p
           className={cn(
-            "mt-4 text-[var(--text-lead)] text-[var(--color-ink-600)]",
+            "mt-4 text-(--text-lead) text-ink-600",
             align === "center" && "mx-auto",
           )}
         >
