@@ -15,7 +15,8 @@ type SectionProps = {
 const toneMap = {
   paper: "bg-paper",
   sunken: "bg-paper-sunken",
-  ink: "bg-ink-900 text-white",
+  // `on-ink` retints the eyebrow primitive for dark surfaces (see index.css).
+  ink: "on-ink bg-ink-900 text-white",
 } as const;
 
 export function Section({

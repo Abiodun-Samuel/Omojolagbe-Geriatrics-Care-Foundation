@@ -23,7 +23,7 @@ export function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="bg-ink-900 text-white">
+    <section className="on-ink bg-ink-900 text-white">
       <Container size="wide" className="py-16 md:py-24">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/60">
@@ -53,7 +53,7 @@ export function PageHero({
         </nav>
 
         {eyebrow && (
-          <p className="eyebrow mt-6 text-brand-300">
+          <p className="eyebrow mt-6 on-ink:text-brand-300">
             {eyebrow}
           </p>
         )}

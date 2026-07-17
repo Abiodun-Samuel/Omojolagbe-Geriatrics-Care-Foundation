@@ -28,7 +28,7 @@ export function SectionHeading({
         className,
       )}
     >
-      {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
+      {eyebrow && <p className="eyebrow mb-3 on-ink:text-brand-300">{eyebrow}</p>}
       <Tag
         className={cn(
           as === "h2" ? "type-h2" : "type-h3",

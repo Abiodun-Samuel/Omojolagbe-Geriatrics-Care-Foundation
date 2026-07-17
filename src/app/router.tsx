@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import { RootLayout } from "@/app/RootLayout";
 import { RouteError } from "@/app/RouteError";
+import { RouteFallback } from "@/app/RouteFallback";
 import Home from "@/pages/Home";
 
 /**
@@ -11,6 +12,8 @@ export const router = createBrowserRouter([
   {
     element: <RootLayout />,
     errorElement: <RouteError />,
+    // Shown while a lazy route chunk loads on first paint.
+    HydrateFallback: RouteFallback,
     children: [
       { index: true, element: <Home /> },
       { path: "about", lazy: () => import("@/pages/About") },

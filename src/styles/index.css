@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Anything inside a dark band can style itself with `on-ink:`. Body text on
+ * ink is white, but the eyebrow primitive's ink-600 is only 3.05:1 there, so
+ * dark sections mark themselves `on-ink` and retint. A custom variant (not a
+ * plain descendant rule) so Tailwind keeps it through tree-shaking. */
+@custom-variant on-ink (&:where(.on-ink, .on-ink *));
+
 /* Self-hosted variable fonts (Phase 3, Phase 6). */
 @import "@fontsource-variable/fraunces";
 @import "@fontsource-variable/figtree";
@@ -19,15 +25,20 @@
   --color-brand-500: #ffd400; /* pressed / denser graphic */
   --color-brand-600: #e0b000;
   --color-brand-700: #a98400;
-  --color-brand-800: #8a6d00; /* only yellow usable as text on white (4.92:1) */
+  /* The ONLY yellow-family value usable as text. Validated against every
+   * surface it can land on, not just white: 6.39:1 on white, 5.97:1 on paper,
+   * 5.43:1 on paper-sunken. All pass AA with margin. */
+  --color-brand-800: #755c00;
   --color-brand-900: #5e4a00;
   --color-brand-950: #3a2e00;
 
   /* Ink ramp (warm near-black) */
   --color-ink-200: #e7e2d9;
   --color-ink-300: #cfc9c0;
-  --color-ink-400: #a8a199;
-  --color-ink-500: #78716a; /* muted (AA at >=16px) */
+  --color-ink-400: #a8a199; /* non-text only: hairlines, disabled marks */
+  /* Text tokens are validated against EVERY surface they can land on, not
+   * just white. ink-500 muted: 5.43 white / 5.07 paper / 4.62 sunken. */
+  --color-ink-500: #6f6961; /* muted text, captions */
   --color-ink-600: #6b6459; /* secondary text */
   --color-ink-700: #4a453c; /* body text */
   --color-ink-800: #2a251e;
@@ -46,7 +57,7 @@
 
   /* Feedback */
   --color-danger: #b4231c;
-  --color-focus: #8a6d00;
+  --color-focus: #755c00;
 
   /* Typography */
   --font-display: "Fraunces Variable", ui-serif, Georgia, serif;

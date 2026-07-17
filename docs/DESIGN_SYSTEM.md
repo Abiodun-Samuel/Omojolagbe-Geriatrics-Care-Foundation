@@ -25,7 +25,7 @@ Yellow is a signal. Contrast math forces the discipline the brief asks for: bran
 | `--color-brand-500` | `#FFD400` | pressed/deeper CTA, denser graphic |
 | `--color-brand-600` | `#E0B000` | edges/borders on light where 400 is too light |
 | `--color-brand-700` | `#A98400` | |
-| `--color-brand-800` | `#8A6D00` | **the only yellow-family value usable as text on white** (4.92:1)  links, inline emphasis |
+| `--color-brand-800` | `#755C00` | **the only yellow-family value usable as text** (6.39:1 on white, 5.97:1 on paper, 5.43:1 on sunken): links, inline emphasis |
 | `--color-brand-900` | `#5E4A00` | |
 | `--color-brand-950` | `#3A2E00` | |
 
@@ -57,10 +57,12 @@ Yellow is a signal. Contrast math forces the discipline the brief asks for: bran
 |-------|-----|--|
 | `--color-danger` | `#B4231C` | form errors (4.5:1+ on white/paper) |
 | `--color-success` | `#1F5E4A` | = verify (reuse) |
-| `--color-focus` | `#8A6D00` | focus ring base, paired with ink offset for visibility on both light and yellow |
+| `--color-focus` | `#755C00` | focus ring base, paired with ink offset for visibility on both light and yellow |
 
 ### Contrast ledger (computed, all pass AA)
-ink-900/white 17.87 · ink-700/white 9.51 (AAA body) · ink-600/white 5.85 · ink-500/white 4.81 · ink-900/brand-400 15.48 · brand-400/ink-900 15.48 · brand-800/white 4.92 (links) · verify/white 7.61 · white/verify 7.61 · white/ink 17.87. Yellow-as-text-on-white is intentionally undefined.
+ink-900/white 17.87 · ink-700/white 9.51 (AAA body) · ink-600/white 5.85 · ink-500/white 4.81 · ink-900/brand-400 15.48 · brand-400/ink-900 15.48 · brand-800 links 6.39 white / 5.97 paper / 5.43 sunken · verify/white 7.61 · white/verify 7.61 · white/ink 17.87. Yellow-as-text-on-light is intentionally undefined.
+
+**Lesson recorded:** brand-800 was originally `#8A6D00`, validated only against white (4.92:1). axe caught it failing at 4.18:1 on `paper-sunken`. A text token must be validated against **every surface it can land on**, not the lightest one.
 
 ---
 

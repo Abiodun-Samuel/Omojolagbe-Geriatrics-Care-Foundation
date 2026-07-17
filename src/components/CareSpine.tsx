@@ -21,7 +21,7 @@ export function CareSpine() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed left-2 top-0 z-30 hidden h-full w-px sm:block md:left-4 lg:left-[max(1.5rem,calc((100vw-var(--container-wide))/2-1.25rem))]"
+      className="pointer-events-none fixed left-2 top-0 z-30 hidden h-full w-0.5 sm:block md:left-4 lg:left-[max(1.5rem,calc((100vw-var(--container-wide))/2-1.5rem))]"
       style={{ backgroundColor: "var(--color-ink-200)" }}
     >
       {reduce ? (

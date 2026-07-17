@@ -23,10 +23,8 @@ export function RouteError() {
       />
       <div className="flex min-h-[70vh] items-center py-24">
         <Container size="prose" className="text-center">
-          <p
-            className="font-display text-[clamp(4rem,18vw,9rem)] font-semibold leading-none text-brand-400"
-            style={{ WebkitTextStroke: "1px var(--color-ink-900)" }}
-          >
+          {/* Ink on a yellow block: yellow is a fill, never text weight. */}
+          <p className="inline-block rounded-lg bg-brand-400 px-8 py-3 font-display text-[clamp(3.5rem,15vw,7rem)] font-semibold leading-none text-ink-900">
             {code}
           </p>
           <h1 className="mt-4 type-h2">{heading}</h1>
