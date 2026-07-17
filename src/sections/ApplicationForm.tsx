@@ -20,6 +20,7 @@ export function ApplicationForm({ roleTitle }: Props) {
   } = useForm<ApplicationValues>({
     resolver: zodResolver(applicationSchema),
     mode: "onBlur",
+    reValidateMode: "onChange",
   });
 
   async function onSubmit(values: ApplicationValues) {

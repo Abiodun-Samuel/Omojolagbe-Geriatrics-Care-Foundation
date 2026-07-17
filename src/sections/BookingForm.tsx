@@ -48,7 +48,11 @@ export function BookingForm() {
     formState: { errors, isSubmitting },
   } = useForm<BookingValues>({
     resolver: zodResolver(bookingSchema),
+    // Validate on blur, but once a field has errored, re-check as the user
+    // types so the error clears the moment they fix it rather than lingering
+    // until they leave the field.
     mode: "onBlur",
+    reValidateMode: "onChange",
   });
 
   async function next() {

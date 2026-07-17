@@ -21,6 +21,7 @@ export function ContactForm() {
   } = useForm<ContactValues>({
     resolver: zodResolver(contactSchema),
     mode: "onBlur",
+    reValidateMode: "onChange",
   });
 
   async function onSubmit(values: ContactValues) {
