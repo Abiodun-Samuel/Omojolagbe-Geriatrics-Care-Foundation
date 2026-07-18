@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { ArrowRight, ShieldCheck, Stethoscope, Star } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { WhatsAppButton } from "@/components/WhatsApp";
@@ -64,17 +64,16 @@ export function Hero() {
               variants={item}
               className="mt-5 type-hero leading-[0.98] tracking-[-0.02em]"
             >
-              The care you would give your parents,{" "}
-              <span className="text-brand-800">if you could be there.</span>
+              The people you love,{" "}
+              <span className="text-brand-800">in the best hands.</span>
             </motion.h1>
 
             <motion.p
               variants={item}
               className="measure-lead mt-6 type-lead text-ink-600"
             >
-              Compassionate home care for elderly people in Ibadan. Vetted
-              caregivers and licensed nurses, arranged from home or from abroad,
-              with a report after every visit.
+              Compassionate home care in Ibadan. Vetted caregivers, licensed
+              nurses, and a report after every visit.
             </motion.p>
 
             {/* H02 preserved verbatim, with its three highlighted words.
@@ -123,37 +122,6 @@ export function Hero() {
                 Contact
               </Link>
             </motion.p>
-
-            {/* trust row */}
-            <motion.ul
-              variants={item}
-              className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-ink-200 pt-6 text-sm text-ink-600"
-            >
-              <li className="flex items-center gap-2">
-                <ShieldCheck
-                  size={18}
-                  className="text-verify-500"
-                  aria-hidden="true"
-                />
-                CAC registered, since 2018
-              </li>
-              <li className="flex items-center gap-2">
-                <Stethoscope
-                  size={18}
-                  className="text-verify-500"
-                  aria-hidden="true"
-                />
-                NMCN-licensed nurses
-              </li>
-              <li className="flex items-center gap-2">
-                <Star
-                  size={18}
-                  className="text-verify-500"
-                  aria-hidden="true"
-                />
-                1000+ elderly lives impacted
-              </li>
-            </motion.ul>
           </motion.div>
 
           {/* ---- Right column: the editorial image collage ---- */}
