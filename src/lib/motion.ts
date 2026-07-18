@@ -33,7 +33,15 @@ export const staggerParent: Variants = {
   },
 };
 
-export const viewportOnce = { once: true, margin: "-10% 0px" } as const;
+/**
+ * Reveal as soon as any part of the element enters the viewport, from a small
+ * negative bottom margin so it triggers just before it is fully on screen.
+ * A large negative margin (e.g. -10% all round) can leave the last item in a
+ * tall, narrow column, like the booking-page sidebar, never satisfying the
+ * threshold, so its content would stay at opacity 0 forever. Content
+ * legibility must never depend on a scroll animation firing.
+ */
+export const viewportOnce = { once: true, margin: "0px 0px -80px 0px" } as const;
 
 export const springSoft: Transition = {
   type: "spring",

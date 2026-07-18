@@ -46,7 +46,7 @@ export function Component() {
       />
 
       <Section size="wide">
-        <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr]">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.25fr_0.75fr]">
           <BookingForm />
 
           <aside className="flex flex-col gap-5">
