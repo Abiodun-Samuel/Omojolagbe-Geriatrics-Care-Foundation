@@ -2,7 +2,6 @@ import type { LucideIcon } from "lucide-react";
 import {
   CalendarClock,
   Users,
-  MapPin,
   BadgeCheck,
   Stethoscope,
   ShieldCheck,
@@ -36,9 +35,10 @@ export const trustStats: TrustStat[] = [
     icon: Users,
   },
   {
-    value: 1,
-    label: "City served, expanding",
-    icon: MapPin,
+    value: 100,
+    suffix: "%",
+    label: "Vetted, trained caregivers",
+    icon: BadgeCheck,
   },
 ];
 

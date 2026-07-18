@@ -1,7 +1,8 @@
 import { FlaskConical } from "lucide-react";
-import { cn } from "@/lib/cn";
+import { Badge } from "@/components/ui/Badge";
 
-/** Visibly marks placeholder content the client will swap (Phase 5.7, D7). */
+/** Visibly marks placeholder content the client will swap (Phase 5.7, D7).
+ *  A thin wrapper over the shared Badge so it stays part of one system. */
 export function PlaceholderTag({
   label = "Sample content",
   className,
@@ -10,14 +11,8 @@ export function PlaceholderTag({
   className?: string;
 }) {
   return (
-    <span
-      className={cn(
-        "inline-flex items-center gap-1.5 rounded-pill bg-paper-sunken px-2.5 py-0.5 text-xs font-medium text-ink-500",
-        className,
-      )}
-    >
-      <FlaskConical size={12} aria-hidden="true" />
+    <Badge tone="neutral" size="sm" icon={FlaskConical} className={className}>
       {label}
-    </span>
+    </Badge>
   );
 }

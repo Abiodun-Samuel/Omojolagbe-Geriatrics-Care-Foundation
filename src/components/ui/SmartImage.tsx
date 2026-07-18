@@ -10,6 +10,9 @@ type SmartImageProps = {
   imgClassName?: string;
   sizes?: string;
   rounded?: boolean;
+  /** Override the intrinsic ratio, e.g. "3 / 4" for a collage tile. The image
+   *  still object-covers, so no distortion. */
+  aspectRatio?: string;
 };
 
 /**
@@ -24,6 +27,7 @@ export function SmartImage({
   imgClassName,
   sizes,
   rounded = true,
+  aspectRatio,
 }: SmartImageProps) {
   return (
     <div
@@ -32,7 +36,7 @@ export function SmartImage({
         rounded && "rounded-card",
         className,
       )}
-      style={{ aspectRatio: `${media.width} / ${media.height}` }}
+      style={{ aspectRatio: aspectRatio ?? `${media.width} / ${media.height}` }}
     >
       <img
         src={media.src}

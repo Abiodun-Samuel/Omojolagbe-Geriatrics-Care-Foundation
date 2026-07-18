@@ -4,8 +4,8 @@ import { processSteps } from "@/content/process";
 
 /**
  * The genuinely-sequential "how it works" flow, rendered as a vertical
- * timeline whose numbered square nodes echo the care spine (docs/DESIGN_SYSTEM
- * section 3). Numbered markers are earned here.
+ * timeline whose numbered square nodes carry the brand yellow. Numbered
+ * markers are earned here because this genuinely is a sequence.
  *
  * The whole list reveals as one group triggered by the <ol> entering view,
  * and the children stagger from that. Each item is NOT independently gated on

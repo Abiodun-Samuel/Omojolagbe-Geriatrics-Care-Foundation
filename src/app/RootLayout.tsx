@@ -2,10 +2,9 @@ import { Outlet, ScrollRestoration } from "react-router";
 import { MotionConfig } from "motion/react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CareSpine } from "@/components/CareSpine";
 import { WhatsAppFab } from "@/components/WhatsApp";
 
-/** App shell: one place for landmarks, the skip link, the spine and the FAB. */
+/** App shell: one place for landmarks, the skip link and the FAB. */
 export function RootLayout() {
   return (
     <MotionConfig reducedMotion="user">
@@ -16,7 +15,6 @@ export function RootLayout() {
         Skip to content
       </a>
 
-      <CareSpine />
       <Header />
 
       <main id="main" className="pt-16 md:pt-20">

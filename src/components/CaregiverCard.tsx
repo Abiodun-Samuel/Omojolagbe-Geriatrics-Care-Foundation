@@ -1,6 +1,7 @@
-import { MapPin } from "lucide-react";
+import { MapPin, BadgeCheck } from "lucide-react";
 import type { Caregiver } from "@/content/caregivers";
 import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
+import { Badge } from "@/components/ui/Badge";
 
 /** A caregiver "dossier" card (not a stock photo, per the design signature). */
 export function CaregiverCard({ caregiver }: { caregiver: Caregiver }) {
@@ -19,14 +20,14 @@ export function CaregiverCard({ caregiver }: { caregiver: Caregiver }) {
           {initials}
         </span>
         <div>
-          <h3 className="font-semibold text-ink-900">
-            {caregiver.name}
-          </h3>
-          <p className="text-sm text-ink-600">
-            {caregiver.role}
-          </p>
+          <h3 className="font-semibold text-ink-900">{caregiver.name}</h3>
+          <p className="text-sm text-ink-600">{caregiver.role}</p>
         </div>
       </div>
+
+      <Badge tone="verify" size="sm" icon={BadgeCheck} className="mt-4 self-start">
+        Vetted and trained
+      </Badge>
 
       <dl className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm text-ink-600">
         <div className="flex items-center gap-1.5">
@@ -46,8 +47,10 @@ export function CaregiverCard({ caregiver }: { caregiver: Caregiver }) {
 
       <ul className="mt-4 flex flex-wrap gap-2">
         {caregiver.specialties.map((s) => (
-          <li key={s} className="chip">
-            {s}
+          <li key={s}>
+            <Badge tone="neutral" size="sm">
+              {s}
+            </Badge>
           </li>
         ))}
       </ul>

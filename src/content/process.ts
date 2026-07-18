@@ -5,7 +5,7 @@ export type ProcessStep = {
 };
 
 /** The genuinely sequential "How it works" flow. Numbered markers are earned
- *  here (Phase 4). Rendered on the care spine's nodes. */
+ *  here (Phase 4). Rendered as the numbered timeline nodes. */
 export const processSteps: ProcessStep[] = [
   {
     number: 1,

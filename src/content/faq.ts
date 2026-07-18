@@ -50,7 +50,7 @@ export const faqItems: FaqItem[] = [
   {
     group: "Care and cost",
     q: "Where do you provide care?",
-    a: "We are based in Ibadan and provide care there today. We are expanding, and we help diaspora families arrange care for parents in Nigeria. Ask us about your city.",
+    a: "We provide home care across Ibadan and the surrounding areas. If you are outside Nigeria, we also help diaspora families arrange care for a parent living in Ibadan. Not sure if we reach your area? Ask us.",
   },
   {
     group: "Families abroad",

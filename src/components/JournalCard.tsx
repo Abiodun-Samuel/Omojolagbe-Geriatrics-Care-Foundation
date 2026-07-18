@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { JournalPost } from "@/content/journal";
 import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
+import { Badge } from "@/components/ui/Badge";
 
 const dateFmt = new Intl.DateTimeFormat("en-NG", {
   day: "numeric",
@@ -12,13 +13,15 @@ export function JournalCard({ post }: { post: JournalPost }) {
   return (
     <article className="card flex h-full flex-col p-6">
       <div className="flex items-center gap-3 text-sm text-ink-500">
-        <span className="chip">{post.category}</span>
+        <Badge tone="neutral" size="sm">
+          {post.category}
+        </Badge>
         <span>{post.readingMinutes} min read</span>
       </div>
       <h3 className="mt-4 text-[1.2rem] font-semibold text-ink-900">
         <Link
           to={`/journal/${post.slug}`}
-          className="hover:text-brand-800"
+          className="cursor-pointer hover:text-brand-800"
         >
           {post.title}
         </Link>

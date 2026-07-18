@@ -54,40 +54,57 @@ export function Header() {
     >
       <Container size="wide">
         <div className="flex h-16 items-center justify-between gap-4 md:h-20">
-          <Link to="/" aria-label="Omojolagbe Geriatric Care, home">
-            <Logo variant="full" />
+          <Link
+            to="/"
+            aria-label="Omojolagbe Geriatric Care, home"
+            className="cursor-pointer"
+          >
+            <Logo variant="full" size={56} />
           </Link>
 
           <nav aria-label="Primary" className="hidden lg:block">
-            <ul className="flex items-center gap-1">
+            <ul className="flex items-center gap-0.5">
               {primaryNav.map((item) => (
                 <li key={item.label} className="group relative">
                   {item.children ? (
                     <>
                       <button
                         type="button"
-                        className="flex items-center gap-1 rounded-sm px-3 py-2 text-[0.95rem] font-medium text-ink-700 transition-colors hover:text-ink-900 group-focus-within:text-ink-900"
+                        className="flex cursor-pointer items-center gap-1.5 rounded-sm px-3 py-2 text-[0.95rem] font-medium text-ink-700 transition-colors hover:text-ink-900 group-focus-within:text-ink-900"
                         aria-haspopup="true"
                       >
+                        {item.icon && (
+                          <item.icon size={16} aria-hidden="true" />
+                        )}
                         {item.label}
                         <ChevronDown size={15} aria-hidden="true" />
                       </button>
-                      <div className="invisible absolute left-0 top-full w-72 pt-2 opacity-0 transition-opacity duration-(--dur-fast) group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                      <div className="invisible absolute left-0 top-full w-80 pt-2 opacity-0 transition-opacity duration-(--dur-fast) group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                         <ul className="card overflow-hidden p-2">
                           {item.children.map((child) => (
                             <li key={child.label}>
                               <Link
                                 to={child.to}
-                                className="block rounded-sm px-3 py-2 hover:bg-paper-sunken"
+                                className="flex cursor-pointer items-start gap-3 rounded-sm px-3 py-2 hover:bg-paper-sunken"
                               >
-                                <span className="block text-[0.9rem] font-semibold text-ink-900">
-                                  {child.label}
-                                </span>
-                                {child.description && (
-                                  <span className="block text-sm text-ink-600">
-                                    {child.description}
+                                {child.icon && (
+                                  <span
+                                    className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-paper-sunken text-ink-700"
+                                    aria-hidden="true"
+                                  >
+                                    <child.icon size={16} />
                                   </span>
                                 )}
+                                <span>
+                                  <span className="block text-[0.9rem] font-semibold text-ink-900">
+                                    {child.label}
+                                  </span>
+                                  {child.description && (
+                                    <span className="block text-sm text-ink-600">
+                                      {child.description}
+                                    </span>
+                                  )}
+                                </span>
                               </Link>
                             </li>
                           ))}
@@ -100,13 +117,14 @@ export function Header() {
                       end={item.to === "/"}
                       className={({ isActive }) =>
                         cn(
-                          "block rounded-sm px-3 py-2 text-[0.95rem] font-medium transition-colors",
+                          "flex cursor-pointer items-center gap-1.5 rounded-sm px-3 py-2 text-[0.95rem] font-medium transition-colors",
                           isActive
                             ? "text-ink-900"
                             : "text-ink-700 hover:text-ink-900",
                         )
                       }
                     >
+                      {item.icon && <item.icon size={16} aria-hidden="true" />}
                       {item.label}
                     </NavLink>
                   )}
@@ -125,7 +143,7 @@ export function Header() {
           <button
             ref={toggleRef}
             type="button"
-            className="btn-ghost inline-flex h-11 w-11 items-center justify-center rounded-sm lg:hidden"
+            className="btn-ghost inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-sm lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -156,8 +174,15 @@ export function Header() {
                       <Link
                         ref={i === 0 ? firstLinkRef : undefined}
                         to={item.to}
-                        className="block py-2 text-lg font-semibold text-ink-900"
+                        className="flex cursor-pointer items-center gap-3 py-2 text-lg font-semibold text-ink-900"
                       >
+                        {item.icon && (
+                          <item.icon
+                            size={20}
+                            className="text-ink-500"
+                            aria-hidden="true"
+                          />
+                        )}
                         {item.label}
                       </Link>
                     )}
@@ -173,8 +198,15 @@ export function Header() {
                             <li key={child.label}>
                               <Link
                                 to={child.to}
-                                className="block py-2 text-ink-700"
+                                className="flex cursor-pointer items-center gap-3 py-2 text-ink-700"
                               >
+                                {child.icon && (
+                                  <child.icon
+                                    size={18}
+                                    className="text-ink-400"
+                                    aria-hidden="true"
+                                  />
+                                )}
                                 {child.label}
                               </Link>
                             </li>

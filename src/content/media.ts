@@ -127,6 +127,40 @@ export const media = {
   },
 } satisfies Record<string, Media>;
 
+/** The four images used in the home hero collage. Real Nigerian care and
+ *  community photography, with descriptive alt text (the gallery set below
+ *  shares one generic caption). */
+export const heroCollage: Media[] = [
+  {
+    id: "hero-collage-1",
+    src: expert,
+    width: 700,
+    height: 600,
+    alt: "Caregivers praying with and supporting elderly women at an Omojolagbe gathering in Ibadan",
+  },
+  {
+    id: "hero-collage-2",
+    src: expert5,
+    width: 700,
+    height: 600,
+    alt: "An Omojolagbe caregiver speaking with a room of seated elderly men and women",
+  },
+  {
+    id: "hero-collage-3",
+    src: expert3,
+    width: 700,
+    height: 600,
+    alt: "A joyful moment with music at an Omojolagbe elderly care event",
+  },
+  {
+    id: "hero-collage-4",
+    src: expert4,
+    width: 700,
+    height: 600,
+    alt: "Elderly Nigerian women together at an Omojolagbe community day",
+  },
+];
+
 /** The 12 expert portraits (real caregiver/consultation photography). */
 export const expertPortraits: Media[] = [
   expert,

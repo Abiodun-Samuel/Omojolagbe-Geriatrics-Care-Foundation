@@ -1,7 +1,7 @@
 import { site } from "@/lib/site";
 import type { FaqItem } from "@/content/faq";
 
-/** JSON-LD builders (Phase 8). Nigerian areaServed and geo included. */
+/** JSON-LD builders (Phase 8). Ibadan areaServed and geo included. */
 
 export function medicalBusinessLd(): Record<string, unknown> {
   return {
@@ -10,7 +10,7 @@ export function medicalBusinessLd(): Record<string, unknown> {
     name: site.legalName,
     alternateName: site.serviceName,
     description:
-      "Compassionate home care and elderly support services in Nigeria: vetted caregivers and licensed nurses.",
+      "Compassionate home care and elderly support in Ibadan: vetted caregivers and licensed nurses.",
     url: site.url,
     telephone: site.phones[0],
     email: site.emails.homeCare,
@@ -27,10 +27,7 @@ export function medicalBusinessLd(): Record<string, unknown> {
       latitude: site.address.geo.lat,
       longitude: site.address.geo.lng,
     },
-    areaServed: [
-      { "@type": "City", name: "Ibadan" },
-      { "@type": "Country", name: "Nigeria" },
-    ],
+    areaServed: { "@type": "City", name: "Ibadan" },
     sameAs: [site.social.facebook],
   };
 }
@@ -44,7 +41,7 @@ export function serviceLd(name: string, description: string, path: string) {
     description,
     url: `${site.url}${path}`,
     provider: { "@type": "MedicalBusiness", name: site.legalName },
-    areaServed: { "@type": "Country", name: "Nigeria" },
+    areaServed: { "@type": "City", name: "Ibadan" },
   };
 }
 

@@ -1,7 +1,8 @@
 import { Link } from "react-router";
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import type { PricingPlan } from "@/content/pricing";
 import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
+import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/cn";
 
 const naira = new Intl.NumberFormat("en-NG", {
@@ -30,9 +31,9 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
           {plan.name}
         </h3>
         {plan.featured && (
-          <span className="chip bg-brand-400 text-ink-900">
+          <Badge tone="brand" size="sm" icon={Star}>
             Most chosen
-          </span>
+          </Badge>
         )}
       </div>
 

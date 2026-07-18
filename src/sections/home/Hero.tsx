@@ -1,19 +1,23 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, Stethoscope, Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { WhatsAppButton } from "@/components/WhatsApp";
-import { media } from "@/content/media";
+import { Badge } from "@/components/ui/Badge";
+import { heroCollage } from "@/content/media";
 import { heroLegacyLine } from "@/content/about";
 import { easeBrand } from "@/lib/motion";
 
 /**
- * The flagship hero: a thesis, not a slideshow (Phase 1: things we will not
- * do). One orchestrated load sequence. Text is in the DOM immediately and is
- * readable before motion completes; only transform/opacity animate.
- * H01 ("Best Home Care & Services Provider") is preserved as the eyebrow so
- * the original positioning line is not lost.
+ * The flagship hero: an editorial image collage, not a slideshow (Phase 1:
+ * things we will not do). One orchestrated load sequence. Text is in the DOM
+ * immediately and readable before motion completes; only transform/opacity
+ * animate.
+ *
+ * Preserved original copy: H01 ("Best Home Care & Services Provider") as the
+ * eyebrow badge, and H02 ("We create healthier, happier and fruitful life for
+ * the elderly.") as the trust line, so the original positioning is not lost.
  */
 export function Hero() {
   const container = {
@@ -28,44 +32,58 @@ export function Hero() {
       transition: { duration: 0.56, ease: easeBrand },
     },
   };
+  const imageIn = (delay: number) => ({
+    hidden: { opacity: 0, y: 24, scale: 0.97 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.7, ease: easeBrand, delay },
+    },
+  });
 
   return (
-    <section className="relative overflow-hidden bg-paper pb-[clamp(3rem,6vw,6rem)] pt-[clamp(2rem,5vw,4rem)]">
-      <Container size="wide">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+    <section className="relative overflow-hidden bg-paper pb-[clamp(3rem,6vw,6rem)] pt-[clamp(1.5rem,4vw,3.5rem)]">
+      {/* soft brand wash behind the collage */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-0 hidden h-[42rem] w-[42rem] translate-x-1/4 -translate-y-1/4 rounded-full bg-brand-100/60 blur-3xl lg:block"
+      />
+
+      <Container size="wide" className="relative">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
+          {/* ---- Left column: the thesis ---- */}
           <motion.div variants={container} initial="hidden" animate="visible">
-            <motion.p
-              variants={item}
-              className="eyebrow inline-flex items-center gap-2"
-            >
-              <span
-                className="inline-block h-2 w-2"
-                style={{ background: "var(--color-brand-400)" }}
-                aria-hidden="true"
-              />
-              Best Home Care &amp; Services Provider
-            </motion.p>
+            <motion.div variants={item}>
+              <Badge tone="brand" size="md" dot>
+                Best Home Care &amp; Services Provider
+              </Badge>
+            </motion.div>
 
             <motion.h1
               variants={item}
               className="mt-5 type-hero leading-[0.98] tracking-[-0.02em]"
             >
-              Care your parents can feel, that you can see.
+              The care you would give your parents,{" "}
+              <span className="text-brand-800">if you could be there.</span>
             </motion.h1>
 
             <motion.p
               variants={item}
               className="measure-lead mt-6 type-lead text-ink-600"
             >
-              Compassionate home care for elderly Nigerians. Vetted caregivers
-              and licensed nurses in Ibadan, arranged from home or from abroad,
+              Compassionate home care for elderly people in Ibadan. Vetted
+              caregivers and licensed nurses, arranged from home or from abroad,
               with a report after every visit.
             </motion.p>
 
-            {/* H02 preserved verbatim, with its three highlighted words. The
-                brand yellow cannot be text on paper (1.10:1), so emphasis is
-                a yellow underline on ink rather than yellow type. */}
-            <motion.p variants={item} className="mt-4 font-display text-[1.15rem] text-ink-800">
+            {/* H02 preserved verbatim, with its three highlighted words.
+                Yellow cannot be text on paper (1.10:1), so emphasis is a
+                yellow marker behind ink. */}
+            <motion.p
+              variants={item}
+              className="mt-4 font-display text-[1.15rem] text-ink-800"
+            >
               We create{" "}
               {heroLegacyLine.words.map((word, i) => (
                 <span key={word}>
@@ -88,43 +106,132 @@ export function Hero() {
             </motion.div>
 
             {/* H03 and H04 preserved verbatim as the secondary paths. */}
-            <motion.p variants={item} className="mt-5 flex flex-wrap gap-x-5 text-sm">
+            <motion.p
+              variants={item}
+              className="mt-5 flex flex-wrap gap-x-5 text-sm"
+            >
               <Link
                 to="/about"
-                className="font-semibold text-brand-800 hover:underline"
+                className="cursor-pointer font-semibold text-brand-800 hover:underline"
               >
                 Learn More &#8594;
               </Link>
               <Link
                 to="/contact"
-                className="font-semibold text-brand-800 hover:underline"
+                className="cursor-pointer font-semibold text-brand-800 hover:underline"
               >
                 Contact
               </Link>
             </motion.p>
+
+            {/* trust row */}
+            <motion.ul
+              variants={item}
+              className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-ink-200 pt-6 text-sm text-ink-600"
+            >
+              <li className="flex items-center gap-2">
+                <ShieldCheck
+                  size={18}
+                  className="text-verify-500"
+                  aria-hidden="true"
+                />
+                CAC registered, since 2018
+              </li>
+              <li className="flex items-center gap-2">
+                <Stethoscope
+                  size={18}
+                  className="text-verify-500"
+                  aria-hidden="true"
+                />
+                NMCN-licensed nurses
+              </li>
+              <li className="flex items-center gap-2">
+                <Star
+                  size={18}
+                  className="text-verify-500"
+                  aria-hidden="true"
+                />
+                1000+ elderly lives impacted
+              </li>
+            </motion.ul>
           </motion.div>
 
+          {/* ---- Right column: the editorial image collage ---- */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: easeBrand, delay: 0.15 }}
-            className="relative"
+            initial="hidden"
+            animate="visible"
+            className="relative mx-auto w-full max-w-xl lg:mx-0"
           >
-            <SmartImage
-              media={media.heroPrimary}
-              priority
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="shadow-pop"
-            />
-            <div className="card absolute -bottom-5 -left-4 hidden max-w-[15rem] p-4 sm:block">
-              <p className="text-sm font-semibold text-ink-900">
-                A report after every visit
-              </p>
-              <p className="mt-1 text-sm text-ink-600">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex flex-col gap-4">
+                <motion.div
+                  variants={imageIn(0.15)}
+                  className="overflow-hidden rounded-lg shadow-pop"
+                >
+                  <SmartImage
+                    media={heroCollage[0]}
+                    priority
+                    sizes="(min-width: 1024px) 22vw, 45vw"
+                    aspectRatio="3 / 4"
+                  />
+                </motion.div>
+                <motion.div
+                  variants={imageIn(0.3)}
+                  className="overflow-hidden rounded-lg shadow-card"
+                >
+                  <SmartImage
+                    media={heroCollage[1]}
+                    sizes="(min-width: 1024px) 22vw, 45vw"
+                    aspectRatio="1 / 1"
+                  />
+                </motion.div>
+              </div>
+
+              <div className="flex flex-col gap-4 pt-10">
+                <motion.div
+                  variants={imageIn(0.22)}
+                  className="overflow-hidden rounded-lg shadow-card"
+                >
+                  <SmartImage
+                    media={heroCollage[2]}
+                    sizes="(min-width: 1024px) 22vw, 45vw"
+                    aspectRatio="1 / 1"
+                  />
+                </motion.div>
+                <motion.div
+                  variants={imageIn(0.37)}
+                  className="overflow-hidden rounded-lg shadow-pop"
+                >
+                  <SmartImage
+                    media={heroCollage[3]}
+                    sizes="(min-width: 1024px) 22vw, 45vw"
+                    aspectRatio="3 / 4"
+                  />
+                </motion.div>
+              </div>
+            </div>
+
+            {/* floating proof card */}
+            <motion.div
+              variants={imageIn(0.5)}
+              className="card absolute -bottom-5 left-1/2 w-[15rem] -translate-x-1/2 p-4"
+            >
+              <div className="flex items-center gap-2">
+                <span
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-verify-50"
+                  aria-hidden="true"
+                >
+                  <ShieldCheck size={18} className="text-verify-500" />
+                </span>
+                <p className="text-sm font-semibold text-ink-900">
+                  A report after every visit
+                </p>
+              </div>
+              <p className="mt-2 text-sm text-ink-600">
                 So a family member anywhere always knows how their parent is
                 doing.
               </p>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </Container>

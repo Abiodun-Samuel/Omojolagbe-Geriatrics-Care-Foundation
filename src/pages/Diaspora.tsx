@@ -48,8 +48,8 @@ export function Component() {
   return (
     <>
       <Seo
-        title="Care for Your Parents in Nigeria, Arranged from Abroad | Omojolagbe"
-        description="For Nigerians abroad: arrange reliable, reported home care for your parents in Nigeria. Pay in Naira, reach us on WhatsApp across time zones, get a report after every visit."
+        title="Care for Your Parents in Ibadan, Arranged from Abroad | Omojolagbe"
+        description="For Nigerians abroad: arrange reliable, reported home care for your parents in Ibadan. Pay in Naira, reach us on WhatsApp across time zones, get a report after every visit."
         path="/diaspora"
         jsonLd={[
           breadcrumbLd([
@@ -70,13 +70,13 @@ export function Component() {
             <ArrowRight size={17} aria-hidden="true" />
           </Link>
           <WhatsAppButton
-            message="Hello Omojolagbe Care, I live abroad and want to arrange care for my parent in Nigeria."
+            message="Hello Omojolagbe Care, I live abroad and want to arrange care for my parent in Ibadan."
             label="Talk to us on WhatsApp"
           />
         </div>
       </PageHero>
 
-      {/* The emotional spine (Phase 1 research: care before the crisis). */}
+      {/* Care before the crisis (Phase 1 research). */}
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
           <Reveal>
@@ -152,7 +152,7 @@ export function Component() {
             </p>
             <WhatsAppButton
               className="mt-6"
-              message="Hello Omojolagbe Care, I live abroad and want to arrange care for my parent in Nigeria."
+              message="Hello Omojolagbe Care, I live abroad and want to arrange care for my parent in Ibadan."
               label="Ask us anything on WhatsApp"
             />
           </div>
