@@ -6,8 +6,8 @@
  * traps and restores focus, and the booking flow can be completed without a
  * mouse.
  *
- * Reduced motion: asserts that with prefers-reduced-motion the scroll-linked
- * spine does not animate and content is visible immediately.
+ * Reduced motion: asserts that with prefers-reduced-motion content is visible
+ * immediately and transitions are clamped.
  */
 import { chromium, type Page } from "playwright";
 
@@ -180,24 +180,6 @@ async function run() {
       return el ? getComputedStyle(el).opacity : "missing";
     });
     check("Reduced motion: hero content is visible immediately", cardOpacity === "1");
-
-    // The spine must not scroll-animate: its fill is a static cap.
-    await page.evaluate(() => window.scrollTo(0, 2000));
-    await page.waitForTimeout(500);
-    const spineStatic = await page.evaluate(() => {
-      const track = document.querySelector(
-        'div[aria-hidden="true"][class*="fixed"][class*="w-0.5"], div[aria-hidden="true"][class*="fixed"][class*="w-px"]',
-      );
-      const inner = track?.firstElementChild as HTMLElement | null;
-      if (!inner) return "no spine";
-      // Static cap is a plain span with a fixed height, not a scaled motion div.
-      return getComputedStyle(inner).transform;
-    });
-    check(
-      "Reduced motion: spine does not scroll-scale",
-      spineStatic === "none" || spineStatic === "matrix(1, 0, 0, 1, 0, 0)",
-      `transform was ${spineStatic}`,
-    );
 
     // Global CSS must clamp transition duration.
     const dur = await page.evaluate(() => {

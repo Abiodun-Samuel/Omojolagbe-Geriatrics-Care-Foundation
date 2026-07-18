@@ -2,6 +2,8 @@
 
 Fixed inputs: the logo, the yellow, the black. Everything below is derived from those and validated for contrast. All values become CSS custom properties in `@theme` (Tailwind v4, CSS-first). No `tailwind.config.js`.
 
+> **Update:** the "care spine" (the scroll-linked vertical line down the left margin) was **removed at the client's request**. Sections below still describe it as the original structural signature; treat those as design history. The brand's yellow-as-signal discipline, the dossier art direction, the type system and the motion language all still hold. The home hero was also rebuilt as an editorial image collage (see `src/sections/home/Hero.tsx`).
+
 ---
 
 ## 0. The one idea

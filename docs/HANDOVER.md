@@ -89,20 +89,26 @@ Run `npm run check:images` after any change; a broken link fails the build.
 
 ## How to wire the forms (the one place)
 
-Forms currently submit through `src/lib/forms/adapter.ts`. With no backend
-configured it opens the user's mail client with the submission prefilled, and
-tells them so, honestly. It never fakes a silent success.
+Forms submit through `src/lib/forms/adapter.ts`. There is no backend: every
+submission goes from the browser to Web3Forms, which emails it to the address
+registered with your access key.
 
-To send to a real backend, set one environment variable:
+To turn on real email delivery, set one environment variable (see
+`.env.example`):
 
 ```
-VITE_FORM_ENDPOINT=https://formspree.io/f/xxxx     # or a Resend function, or any JSON POST endpoint
+VITE_WEB3FORMS_KEY=your-access-key
 ```
 
-The adapter POSTs `{ subject, ...fields }` as JSON. A honeypot field drops
-bots silently. On a network failure the user is told to try again or use
-WhatsApp. Nothing else needs to change; all three forms (contact,
-application, booking) go through this one adapter.
+Get the key free at web3forms.com: enter the inbox you want submissions in,
+and they email you a key. Paste it, then rebuild.
+
+With no key set, the forms still work: they open the visitor's own mail app
+with the message pre-filled and addressed to you. They never fake a silent
+success. A honeypot field plus Web3Forms' own botcheck drop spam. On a
+network failure the user is told to try again or use WhatsApp. All three forms
+(contact, caregiver application, booking) go through this one adapter, and are
+covered by the keyboard/flow test in `scripts/check-keyboard.ts`.
 
 ## How to add a journal post
 
@@ -137,9 +143,10 @@ All in `src/styles/index.css` under `@theme`, documented in
   size and colour.
 - On a dark band, add `on-ink` to the section so the eyebrow retints to a
   legible brand tint.
-- The **care spine** (`src/components/CareSpine.tsx`) is the structural
-  signature: a hairline down the left margin that fills with yellow as you
-  scroll. It collapses to a static cap under reduced motion.
+- **Badges and pills** are one component: `src/components/ui/Badge.tsx`. Use it
+  (with a `tone`, `size`, and optional `icon` or `dot`) for trust chips,
+  category tags, "verified" marks and status pills, so they stay one system.
+  `PlaceholderTag` wraps it.
 
 ## Motion
 
@@ -206,5 +213,5 @@ catch-all rewrite so client routes resolve on refresh:
 - **Vercel** (`vercel.json`): rewrite `/(.*)` to `/index.html`.
 - **Netlify** (`_redirects` or `netlify.toml`): `/* /index.html 200`.
 
-Set `VITE_FORM_ENDPOINT` in the host's environment variables to turn on real
+Set `VITE_WEB3FORMS_KEY` in the host's environment variables to turn on real
 form submissions, and set the production domain in `src/lib/site.ts`.
