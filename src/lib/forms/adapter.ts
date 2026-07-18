@@ -1,19 +1,22 @@
 /**
  * Form submission adapter (Phase 8).
  *
- * The client can wire a real backend in ONE place: set VITE_FORM_ENDPOINT to a
- * Formspree URL, a Resend-backed function, or any API that accepts JSON POST.
+ * Every form on the site (contact, caregiver application, booking) submits
+ * through here. There is no backend: submissions go straight from the browser
+ * to Web3Forms, which emails them to the address registered with the access
+ * key. The client wires it up in ONE place by setting VITE_WEB3FORMS_KEY.
  *
- * If no endpoint is configured we do NOT fake a success. We fall back to
- * opening the user's mail client with the submission prefilled, and report
- * that honestly to the UI, so a real enquiry is never silently dropped.
+ * If no key is configured we do NOT fake a success. We fall back to opening
+ * the user's mail client with the submission prefilled, and report that
+ * honestly to the UI, so a real enquiry is never silently dropped.
  *
  * See docs/HANDOVER.md "How to wire forms".
  */
 
 import { site } from "@/lib/site";
 
-const endpoint = import.meta.env.VITE_FORM_ENDPOINT as string | undefined;
+const accessKey = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 
 export type SubmitResult =
   | { status: "sent" }
@@ -38,24 +41,43 @@ export async function submitForm(
   payload: Payload,
   to: string = site.emails.homeCare,
 ): Promise<SubmitResult> {
-  // Honeypot: pretend success, send nothing.
+  // Honeypot: pretend success, send nothing. (Web3Forms also has its own
+  // botcheck field, set below, as a second line of defence.)
   if (payload.company) return { status: "sent" };
 
-  if (!endpoint) {
+  // No key configured: never fake success, fall back to the mail client.
+  if (!accessKey) {
     return { status: "mailto", href: buildMailto(subject, payload, to) };
   }
 
+  // Strip the honeypot before sending.
+  const fields = { ...payload };
+  delete fields.company;
+
   try {
-    const res = await fetch(endpoint, {
+    const res = await fetch(WEB3FORMS_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({ subject, ...payload }),
+      body: JSON.stringify({
+        access_key: accessKey,
+        subject,
+        from_name: site.name,
+        // Where Web3Forms should route this. The key's own address is the
+        // default; this makes the intended inbox explicit per form.
+        to,
+        botcheck: "",
+        ...fields,
+      }),
     });
 
-    if (!res.ok) {
+    const data = (await res.json().catch(() => null)) as
+      | { success?: boolean }
+      | null;
+
+    if (!res.ok || !data?.success) {
       return {
         status: "error",
         message:

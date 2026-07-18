@@ -142,6 +142,28 @@
     -webkit-text-size-adjust: 100%;
   }
 
+  /* Every interactive element gets a pointer cursor, including radio/checkbox
+   * inputs and their labels, tabs and other role-based controls. Disabled
+   * controls keep the not-allowed cursor. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"],
+  a[href],
+  label:has(input:not([type="text"]):not([type="email"]):not([type="tel"]):not([type="search"])),
+  summary,
+  select:not(:disabled),
+  input[type="radio"]:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="submit"]:not(:disabled),
+  input[type="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+
   body {
     background-color: var(--color-paper);
     color: var(--color-ink-700);
